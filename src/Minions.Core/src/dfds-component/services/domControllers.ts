@@ -1,32 +1,32 @@
 export const injectIntoShadowRoot = (webComponent: HTMLElement, element: Element): void => {
-  const elementToPrepend = webComponent.shadowRoot || webComponent;
+    const elementToPrepend: Element | ShadowRoot = webComponent.shadowRoot || webComponent;
 
-  if (existsIdenticalElement(element, elementToPrepend)) {
-    return;
-  }
+    if (existsIdenticalElement(element, elementToPrepend)) {
+        return;
+    }
 
-  elementToPrepend.prepend(element);
+    elementToPrepend.prepend(element);
 };
 
 export const injectIntoHead = (element: Element) => {
-  if (existsIdenticalElement(element, document.head)) {
-    return;
-  }
+    if (existsIdenticalElement(element, document.head)) {
+        return;
+    }
 
-  document.head.append(element);
+    document.head.append(element);
 };
 
 export const stripStyleFromHead = () => {
-  const allChildren = document.head.children;
-  const style = Array.from(allChildren).find((child) => child.id === 'direflow-style');
+    const allChildren = document.head.children;
+    const style = Array.from(allChildren).find((child) => child.id === "direflow-style");
 
-  if (style) {
-    document.head.removeChild(style);
-  }
+    if (style) {
+        document.head.removeChild(style);
+    }
 };
 
 export const existsIdenticalElement = (element: Element, host: Element | ShadowRoot): boolean => {
-  const allChildren = host.children;
-  const exists = Array.from(allChildren).some((child) => element.isEqualNode(child));
-  return exists;
+    const allChildren = Array.from(host.children);
+    const exists = allChildren.some((child: Element) => element.isEqualNode(child) as any);
+    return exists;
 };

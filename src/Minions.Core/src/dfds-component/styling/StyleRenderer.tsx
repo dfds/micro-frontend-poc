@@ -1,22 +1,23 @@
 import React, { FC, Component, ComponentClass } from "react";
-import { StyleConfig } from "./StyleConfig";
-import { StyleElement } from "./StyleElement";
+import Styles from "./Styles";
+import StyleHandler from "./StyleHandler";
 
-const StyleRenderer = (styles: StyleConfig) => <P, S>(
+// ReSharper disable once InconsistentNaming => JSX expects it to be upper case.
+const StyleRenderer = (styles: Styles) => <P, S>(
     // ReSharper disable once InconsistentNaming => JSX expects it to be upper case.
     WrappedComponent: ComponentClass<P, S> | FC<P>,
 ) => {
     return class extends Component<P, S> {
         public render(): JSX.Element {
             return (
-                <StyleElement styles={styles}>
+                <StyleHandler styles={styles}>
                     <div>
                         <WrappedComponent {...(this.props as P)} />
                     </div>
-                </StyleElement>
+                </StyleHandler>
             );
         }
     };
 };
 
-export { StyleRenderer };
+export default StyleRenderer;

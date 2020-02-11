@@ -1,10 +1,11 @@
-import React, { FC, CSSProperties } from "react";
+import { FC, CSSProperties } from "react";
 import Style from "style-it";
-import { IStyleConfig } from "./StyleConfig";
+import IStyleContainer from "./IStyleContainer";
+import Styles from "./Styles";
 
 // ReSharper disable once InconsistentNaming => JSX expects it to be upper case.
-export const StyleElement: FC<IStyleConfig> = (props: any): JSX.Element => {
-    let styles:any;
+const StyleHandler: FC<IStyleContainer> = (props: IStyleContainer): JSX.Element => {
+    let styles: Styles;
 
     if (typeof props.styles === "string") {
         styles = (props.styles as CSSProperties).toString();
@@ -16,3 +17,5 @@ export const StyleElement: FC<IStyleConfig> = (props: any): JSX.Element => {
 
     return Style.it(styles, props.children);
 };
+
+export default StyleHandler;

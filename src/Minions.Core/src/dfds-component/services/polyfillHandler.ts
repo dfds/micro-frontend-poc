@@ -1,4 +1,4 @@
-import { IDireflowPlugin } from '../interfaces/IComponentConfig';
+import { IDireflowPlugin } from '../component/IComponentConfig';
 
 type TWcPolyfillsLoaded = Array<{ script: Element; hasLoaded: boolean }>;
 declare global {

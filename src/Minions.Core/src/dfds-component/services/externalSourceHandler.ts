@@ -1,11 +1,11 @@
-import { IDireflowPlugin } from '../interfaces/IComponentConfig';
-import { injectIntoShadowRoot, injectIntoHead } from './domControllers';
+import IPlugin from "../interfaces/IPlugin";
+import { injectIntoShadowRoot, injectIntoHead } from "./domControllers";
 
-const includeExternalSources = (element: HTMLElement, plugins: IDireflowPlugin[] | undefined) => {
-  const externalLoaderPlugin = plugins?.find((plugin) => plugin.name === 'external-loader');
-  const paths = externalLoaderPlugin?.options?.paths;
+const includeExternalSources = (element: HTMLElement, plugins?: IPlugin[] | undefined) => {
+    const externalLoaderPlugin: any = plugins?.find((plugin) => plugin.name === "external-loader");
+    const paths: any = externalLoaderPlugin?.options?.paths;
 
-  if (paths && paths.length) {
+    if (paths && paths.length) {
     setTimeout(() => {
       paths.forEach((path: string) => {
         if (path.endsWith('.js')) {
@@ -24,7 +24,7 @@ const includeExternalSources = (element: HTMLElement, plugins: IDireflowPlugin[]
         }
       });
     });
-  }
+    }
 }
 
 export default includeExternalSources;
