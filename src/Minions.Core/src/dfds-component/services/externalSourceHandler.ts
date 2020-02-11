@@ -8,16 +8,16 @@ const includeExternalSources = (element: HTMLElement, plugins?: IPlugin[] | unde
     if (paths && paths.length) {
     setTimeout(() => {
       paths.forEach((path: string) => {
-        if (path.endsWith('.js')) {
-          const script = document.createElement('script');
+        if (path.endsWith(".js")) {
+          const script = document.createElement("script");
           script.src = path;
 
           injectIntoHead(script);
         }
 
-        if (path.endsWith('.css')) {
-          const link = document.createElement('link');
-          link.rel = 'stylesheet';
+        if (path.endsWith(".css")) {
+          const link = document.createElement("link");
+          link.rel = "stylesheet";
           link.href = path;
 
           injectIntoShadowRoot(element, link);

@@ -1,9 +1,9 @@
 import IPlugin from "../plugins/IPlugin";
 
-type TWcPolyfillsLoaded = Array<{ script: Element; hasLoaded: boolean }>;
+type WcPolyfillsLoaded = Array<{ script: Element; hasLoaded: boolean }>;
 declare global {
   interface Window {
-    wcPolyfillsLoaded: TWcPolyfillsLoaded;
+      wcPolyfillsLoaded: WcPolyfillsLoaded;
   }
 }
 
@@ -17,7 +17,7 @@ const includePolyfills = async (
     return;
   }
 
-  const polyfillLoaderPlugin: any = plugins?.find((plugin) => plugin.name === 'polyfill-loader');
+  const polyfillLoaderPlugin: any = plugins?.find((plugin) => plugin.name === "polyfill-loader");
 
   if (polyfillLoaderPlugin) {
     return includePolyfillsFromPlugin(polyfillLoaderPlugin);

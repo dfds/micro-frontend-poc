@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { createPortal } from 'react-dom';
+import React, { FC } from "react";
+import { createPortal } from "react-dom";
 
 interface IShadowContent {
   root: ShadowRoot;
@@ -12,28 +12,29 @@ interface IShadowComponent {
 
 interface IComponentOptions {
   root: Element;
-  mode: 'open' | 'closed';
+  mode: "open" | "closed";
 }
 
+// ReSharper disable once InconsistentNaming
 const ShadowContent: FC<IShadowContent> = (props) => {
   const root = props.root as any;
   return createPortal(props.children, root);
 };
 
 const createProxyComponent = (options: IComponentOptions) => {
-  const ShadowRoot: FC<IShadowComponent> = (props) => {
+  const shadowRoot: FC<IShadowComponent> = (props) => {
     const shadowedRoot = options.root.shadowRoot || options.root.attachShadow({ mode: options.mode });
     return <ShadowContent root={shadowedRoot}>{props.children}</ShadowContent>;
   };
 
-  return ShadowRoot;
+  return shadowRoot;
 };
 
 const createProxyRoot = (root: Element) => {
   return new Proxy<any>(
     {},
     {
-      get(_: unknown, name: 'open' | 'closed'): any {
+      get(_: unknown, name: "open" | "closed"): any {
         return createProxyComponent({ root, mode: name });
       },
     }

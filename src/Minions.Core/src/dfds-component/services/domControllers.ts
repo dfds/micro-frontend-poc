@@ -18,7 +18,7 @@ export const injectIntoHead = (element: Element) => {
 
 export const stripStyleFromHead = () => {
     const allChildren = document.head.children;
-    const style = Array.from(allChildren).find((child) => child.id === "direflow-style");
+    const style = Array.from(allChildren).find((child) => child.id === "dfds-style");
 
     if (style) {
         document.head.removeChild(style);
