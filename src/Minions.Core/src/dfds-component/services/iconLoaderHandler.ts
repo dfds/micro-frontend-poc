@@ -1,13 +1,13 @@
-import { IDireflowPlugin } from '../component/IComponentConfig';
+import IPlugin from "../plugins/IPlugin";
 import { injectIntoShadowRoot } from './domControllers';
 
-const includeGoogleIcons = (element: HTMLElement, plugins: IDireflowPlugin[] | undefined) => {
-  const iconLoaderPlugin = plugins?.find((plugin) => plugin.name === 'icon-loader');
+const includeGoogleIcons = (element: HTMLElement, plugins: IPlugin[] | undefined) => {
+  const iconLoaderPlugin = plugins?.find((plugin) => plugin.name === "icon-loader");
 
-  if (iconLoaderPlugin?.options?.packs.includes('material-icons')) {
+  if (iconLoaderPlugin?.options?.packs.includes("material-icons")) {
     setTimeout(() => {
       const link = document.createElement('link');
-      link.rel = 'stylesheet';
+      link.rel = "stylesheet";
       link.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
       injectIntoShadowRoot(element, link);

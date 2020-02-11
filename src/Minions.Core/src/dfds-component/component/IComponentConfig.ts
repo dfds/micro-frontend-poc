@@ -1,4 +1,4 @@
-import IPlugin from "../interfaces/IPlugin"
+import IPlugin from "../plugins/IPlugin"
 
 interface IComponentConfig {
     name: string;

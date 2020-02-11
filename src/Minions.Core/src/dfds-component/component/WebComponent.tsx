@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import IPlugin from "../interfaces/IPlugin";
+import IPlugin from "../plugins/IPlugin";
 import { EventProvider } from "../events/EventContext";
 import createProxyRoot from "../services/proxyRoot";
 import addStyledComponentStyles from "../services/styledComponentsHandler";
@@ -35,7 +35,7 @@ class WebComponent {
     //All properties with primitive values is added to attributes.
     private reflectPropertiesToAttributes(): void {
         Object.entries(this.componentProperties).forEach(([key, value]) => {
-            if (typeof value !== 'number' && typeof value !== 'string' && typeof value !== 'boolean') {
+            if (typeof value !== "number" && typeof value !== "string" && typeof value !== "boolean") {
                 return;
             }
 
@@ -53,7 +53,7 @@ class WebComponent {
         await includePolyfills({ usesShadow: !!component.shadow }, this.plugins);
 
         return class extends HTMLElement {
-            private _application: JSX.Element | undefined;
+            private reactApplication: JSX.Element | undefined;
 
             constructor() {
                 super();
@@ -130,8 +130,10 @@ class WebComponent {
                 const self: any = this;
 
                 for (const key in properties) {
-                    if (self[key] != null) {
-                        properties[key] = self[key];
+                    if (properties.hasOwnProperty(key)) {
+                        if (self[key] != null) {
+                            properties[key] = self[key];
+                        }
                     }
                 }
 
@@ -195,8 +197,8 @@ class WebComponent {
              * Create the React App
              */
             private application(): JSX.Element {
-                if (this._application) {
-                    return this._application;
+                if (this.reactApplication) {
+                    return this.reactApplication;
                 }
 
                 const baseApplication = (
@@ -214,7 +216,7 @@ class WebComponent {
             private eventDispatcher = (event: Event) => {
                 this.dispatchEvent(event);
             }
-
+            
             /**
              * Mount React App onto the Web Component
              */
@@ -227,11 +229,11 @@ class WebComponent {
 
                     let currentChildren: Node[] | undefined;
 
-                    //if (options?.initial) {
-                    //    currentChildren = Array.from(this.children).map((child: Node) =>
-                    //        child.cloneNode(true),
-                    //    );
-                    //}
+                    if (options?.initial) {
+                        currentChildren = Array.from(this.children).map((child: Node) =>
+                            child.cloneNode(true),
+                        );
+                    }
 
                     const root = createProxyRoot(this);
                     ReactDOM.render(<root.open>{application}</root.open>, this);

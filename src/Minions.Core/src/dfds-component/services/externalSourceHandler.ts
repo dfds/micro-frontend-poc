@@ -1,4 +1,4 @@
-import IPlugin from "../interfaces/IPlugin";
+import IPlugin from "../plugins/IPlugin";
 import { injectIntoShadowRoot, injectIntoHead } from "./domControllers";
 
 const includeExternalSources = (element: HTMLElement, plugins?: IPlugin[] | undefined) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import IComponentConfig from "./IComponentConfig";
-import IPlugin from "../interfaces/IPlugin";
+import IPlugin from "../plugins/IPlugin";
 import WebComponent from "./WebComponent";
 
 class ReactWrapper {
