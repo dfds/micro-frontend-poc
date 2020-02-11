@@ -1,2 +1,0 @@
-C:\Users\toban\source\repos\micro-frontend-poc\src\Minions.Core\obj\Debug\Minions.Core.njsprojAssemblyReference.cache
-C:\Users\toban\source\repos\micro-frontend-poc\src\Minions.Core\bin\Microsoft.NodejsTools.WebRole.dll
