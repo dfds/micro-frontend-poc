@@ -282,3 +282,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/osx,node,windows,webstorm+all,intellij+all,visualstudiocode
+/src/BlasterV2/bin
+/src/BlasterV2/obj
+.vs/
