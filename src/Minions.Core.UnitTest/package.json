@@ -2,17 +2,21 @@
   "name": "minions.core.unit-test",
   "version": "0.0.0",
   "description": "Minions.Core.UnitTest",
-  "main": "app.js",
   "author": {
     "name": ""
   },
   "scripts": {
     "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "clean": "tsc --build --clean",
+    "test": "jest --env=node --colors --coverage test"
+  },
+  "dependencies": {
+    "minions-core": "file:../Minions.Core"
   },
   "devDependencies": {
-    "@types/node": "^8.0.14",
+    "@types/jest": "^25.1.2",
     "typescript": "^3.2.2",
-    "ts-jest": "^25.2.0"
+    "ts-jest": "^25.1.0",
+    "jest": "^25.1.0"
   }
 }

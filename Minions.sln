@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Core", "Minions.Core\Minions.Core.njsproj", "{53F92938-F231-4EF2-A1DA-7FE3183D3674}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Core", "src\Minions.Core\Minions.Core.njsproj", "{53F92938-F231-4EF2-A1DA-7FE3183D3674}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "BlasterV2", "BlasterV2\BlasterV2.njsproj", "{866FA935-B742-43E3-96E5-F82AFCAACEF8}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "BlasterV2", "src\BlasterV2\BlasterV2.njsproj", "{866FA935-B742-43E3-96E5-F82AFCAACEF8}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Core.UnitTest", "Minions.Core.UnitTest\Minions.Core.UnitTest.njsproj", "{4C7F3691-125D-478B-9633-69D38669695E}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Core.UnitTest", "src\Minions.Core.UnitTest\Minions.Core.UnitTest.njsproj", "{4C7F3691-125D-478B-9633-69D38669695E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

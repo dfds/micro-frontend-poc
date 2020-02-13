@@ -10,9 +10,7 @@
     "clean": "tsc --build --clean"
   },
   "files": [
-    "dist",
-    "config-overrides.js",
-    "config-overrides.d.ts"
+    "dist"
   ],
   "repository": {
     "type": "git",
