@@ -11,7 +11,8 @@
     "clean": "tsc --build --clean"
   },
   "dependencies": {
-    "minions-core": "file:../Minions.Core"
+    "lit-element": "^2.2.1",
+    "minions.core": "file:../Minions.Core"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",

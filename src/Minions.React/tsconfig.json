@@ -2,8 +2,8 @@
   "compilerOptions": {
     "module": "es6",
     "target": "es6",
-    "lib": [ "es2017", "es7", "es6", "dom" ],
     "sourceMap": true,
+    "outDir": "./dist",
     "sourceRoot": "./src",
     "moduleResolution": "node",
     "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
@@ -20,6 +20,7 @@
     "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

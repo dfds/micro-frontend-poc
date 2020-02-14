@@ -1,41 +1,24 @@
 {
-  "name": "minions-core",
+  "name": "minions.core",
   "version": "0.0.0",
-  "description": "DFDS component framework for micro frontend architecture",
-  "main": "dist/index.js",
-  "author": "ZaradarDFDS",
+  "description": "Component framework for micro frontend architecture",
+  "author": {
+    "name": ""
+  },
   "license": "MIT",
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean"
   },
-  "files": [
-    "dist"
-  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:ZaradarDFDS/micro-frontend-poc.git"
   },
   "dependencies": {
-    "@svgr/webpack": "4.3.2",
-    "@types/webfontloader": "^1.6.29",
-    "event-hooks-webpack-plugin": "2.1.4",
-    "node-sass": "^4.13.0",
-    "style-it": "2.1.4",
-    "to-string-loader": "1.1.5",
-    "types": "^0.1.1",
-    "webfontloader": "^1.6.28",
-    "webpack-filter-warnings-plugin": "^1.2.1"
+    "@webcomponents/webcomponentsjs": "^2.4.1",
+    "lit-element": "^2.2.1"
   },
   "devDependencies": {
-    "@types/react": "^16.9.17",
-    "@types/react-dom": "^16.9.4",
     "typescript": "3.7.2"
-  },
-  "peerDependencies": {
-    "@types/react": "16.9.3",
-    "@types/react-dom": "16.9.1",
-    "react": "16.10.1",
-    "react-dom": "16.10.1"
   }
 }

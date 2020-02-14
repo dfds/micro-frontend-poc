@@ -33,39 +33,21 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="tslint.json" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />
-    <Folder Include="src\dfds-component\" />
-    <Folder Include="src\dfds-component\events\" />
-    <Folder Include="src\dfds-component\component\" />
-    <Folder Include="src\dfds-component\plugins\" />
-    <Folder Include="src\dfds-component\styling\" />
-    <Folder Include="src\dfds-component\services\" />
+    <Folder Include="src\components\" />
+    <Folder Include="src\plugins\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\declarations.d.ts" />
-    <TypeScriptCompile Include="src\dfds-component\component\WebComponent.tsx">
+    <TypeScriptCompile Include="src\components\WebComponent.ts" />
+    <TypeScriptCompile Include="src\Minion.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="src\dfds-component\events\EventContext.ts" />
-    <TypeScriptCompile Include="src\dfds-component\plugins\IPlugin.ts" />
-    <TypeScriptCompile Include="src\dfds-component\styling\IStyleContainer.ts" />
-    <TypeScriptCompile Include="src\dfds-component\styling\Styles.ts" />
-    <TypeScriptCompile Include="src\dfds-component\styling\StyleHandler.tsx" />
-    <TypeScriptCompile Include="src\dfds-component\styling\StyleRenderer.tsx" />
-    <TypeScriptCompile Include="src\dfds-component\component\ReactWrapper.ts" />
-    <TypeScriptCompile Include="src\dfds-component\component\IComponentConfig.ts" />
-    <TypeScriptCompile Include="src\dfds-component\services\domControllers.ts" />
-    <TypeScriptCompile Include="src\dfds-component\services\externalSourceHandler.ts" />
-    <TypeScriptCompile Include="src\dfds-component\services\fontLoaderHandler.ts" />
-    <TypeScriptCompile Include="src\dfds-component\services\iconLoaderHandler.ts" />
-    <TypeScriptCompile Include="src\dfds-component\services\polyfillHandler.ts" />
-    <TypeScriptCompile Include="src\dfds-component\services\proxyRoot.tsx" />
-    <TypeScriptCompile Include="src\dfds-component\services\styledComponentsHandler.ts" />
+    <TypeScriptCompile Include="src\plugins\IPluginLoader.ts" />
+    <TypeScriptCompile Include="src\plugins\IPlugin.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

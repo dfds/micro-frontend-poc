@@ -30,16 +30,18 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include=".babelrc.js" />
+    <Content Include="jest.config.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vscode\" />
-    <Folder Include="src\" />
+    <Folder Include="__tests__\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\base.spec.ts" />
+    <TypeScriptCompile Include="__tests__\base.spec.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
