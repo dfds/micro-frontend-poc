@@ -285,3 +285,6 @@ $RECYCLE.BIN/
 /src/BlasterV2/bin
 /src/BlasterV2/obj
 .vs/
+*.dll
+*.cache
+/src/Minions.Core.Test/obj/Debug

@@ -19,6 +19,7 @@
     "lit-element": "^2.2.1"
   },
   "devDependencies": {
+    "lit-analyzer": "^1.1.9",
     "typescript": "3.7.2"
   }
 }

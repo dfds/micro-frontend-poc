@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosts", "Hosts", "{30E9727E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F82FC5DC-6F76-4AA9-8D55-4699F02D6D79}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{1834BD14-676A-4C82-8F50-4FBFAEFB04F5}"
-EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Core.Test", "src\Minions.Core.Test\Minions.Core.Test.njsproj", "{15857E3B-7C40-4351-91A8-EF377ADB113F}"
 EndProject
 Global
