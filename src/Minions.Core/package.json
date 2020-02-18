@@ -3,19 +3,19 @@
   "version": "0.0.0",
   "description": "Component framework for micro frontend architecture",
   "author": {
-    "name": ""
+    "name": "Tobias Andersen"
   },
   "license": "MIT",
-  "scripts": {
-    "build": "tsc --build",
-    "clean": "tsc --build --clean"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:ZaradarDFDS/micro-frontend-poc.git"
   },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch"
+  },
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.4.1",
     "lit-element": "^2.2.1"
   },
   "devDependencies": {

@@ -7,13 +7,13 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Core", "src\Minions
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "BlasterV2", "src\BlasterV2\BlasterV2.njsproj", "{866FA935-B742-43E3-96E5-F82AFCAACEF8}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Core.UnitTest", "src\Minions.Core.UnitTest\Minions.Core.UnitTest.njsproj", "{4C7F3691-125D-478B-9633-69D38669695E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosts", "Hosts", "{30E9727E-B2C8-4A29-BFCC-CE82823389F1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F82FC5DC-6F76-4AA9-8D55-4699F02D6D79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{1834BD14-676A-4C82-8F50-4FBFAEFB04F5}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Core.Test", "src\Minions.Core.Test\Minions.Core.Test.njsproj", "{15857E3B-7C40-4351-91A8-EF377ADB113F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{866FA935-B742-43E3-96E5-F82AFCAACEF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{866FA935-B742-43E3-96E5-F82AFCAACEF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{866FA935-B742-43E3-96E5-F82AFCAACEF8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C7F3691-125D-478B-9633-69D38669695E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C7F3691-125D-478B-9633-69D38669695E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C7F3691-125D-478B-9633-69D38669695E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C7F3691-125D-478B-9633-69D38669695E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15857E3B-7C40-4351-91A8-EF377ADB113F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15857E3B-7C40-4351-91A8-EF377ADB113F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15857E3B-7C40-4351-91A8-EF377ADB113F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15857E3B-7C40-4351-91A8-EF377ADB113F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,7 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{53F92938-F231-4EF2-A1DA-7FE3183D3674} = {F82FC5DC-6F76-4AA9-8D55-4699F02D6D79}
 		{866FA935-B742-43E3-96E5-F82AFCAACEF8} = {30E9727E-B2C8-4A29-BFCC-CE82823389F1}
-		{4C7F3691-125D-478B-9633-69D38669695E} = {F82FC5DC-6F76-4AA9-8D55-4699F02D6D79}
+		{15857E3B-7C40-4351-91A8-EF377ADB113F} = {F82FC5DC-6F76-4AA9-8D55-4699F02D6D79}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86BEED0F-75DF-4810-99B7-03122D359B70}

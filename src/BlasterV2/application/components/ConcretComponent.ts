@@ -1,5 +1,5 @@
 import { html, property, customElement, LitElement } from "lit-element";
-import { WebComponent } from "minions-core/src/components/WebComponent";
+import { WebComponent } from "minions-core/components/WebComponent";
 
 @customElement("foo")
 export class ConcretComponent extends LitElement {

@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "lit-element": "^2.2.1",
-    "minions.core": "file:../Minions.Core"
+    "minions.core": "0.0.0"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",

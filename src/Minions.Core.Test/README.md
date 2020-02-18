@@ -1,0 +1,3 @@
+# Minions.Core.Test
+
+

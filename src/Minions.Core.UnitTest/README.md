@@ -1,3 +1,0 @@
-# Minions.Core.UnitTest
-
-
