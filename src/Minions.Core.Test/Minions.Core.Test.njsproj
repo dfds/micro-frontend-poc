@@ -32,6 +32,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="karma.conf.cjs" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
