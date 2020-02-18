@@ -1,22 +1,18 @@
 {
-  "name": "blaster-v2",
+  "name": "minions.extension.react",
   "version": "0.0.0",
-  "description": "BlasterV2",
-  "main": "server.js",
+  "description": "Minions.Extension.React",
   "author": {
     "name": "DFDS Development Excellence Department"
   },
   "scripts": {
-    "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "build": "tsc --build"
   },
   "dependencies": {
-    "lit-element": "^2.2.1",
     "minions.core": "0.0.0"
   },
   "devDependencies": {
-    "@types/node": "^8.0.14",
     "lit-analyzer": "^1.1.9",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.5"
   }
 }

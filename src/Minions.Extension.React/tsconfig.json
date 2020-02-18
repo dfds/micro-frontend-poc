@@ -6,8 +6,10 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
+    "outDir": "./lib",
+    "rootDir": "./src",
     "strict": true,
-    "noUnusedLocals": false,
+    "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
@@ -22,6 +24,6 @@
       }
     ]
   },
-  "include": [ "**/*.ts" ],
+  "include": [ "src/**/*.ts" ],
   "exclude": [ "node_modules" ]
 }

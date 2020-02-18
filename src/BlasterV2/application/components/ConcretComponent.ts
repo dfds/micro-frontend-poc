@@ -1,16 +1,15 @@
-import { html, property, customElement, LitElement } from "lit-element";
-import { WebComponent } from "minions-core/components/WebComponent";
+import { html, property, customElement, TemplateResult } from "lit-element";
+import { WebComponent } from "minions.core/components/WebComponent";
 
 @customElement("foo")
-export class ConcretComponent extends LitElement {
+export class ConcretComponent extends WebComponent {
     constructor() {
         super();
     }
 
-    //@property({ type: String }) message = "Hello world";
+    @property({ type: String }) message = "Hello world";
 
-    //TODO: Figure out why returning TemplateResult causes an inheritance error (its some module shait)
-    render(): any {
-        return undefined; //html`${this.message}`;
+    render(): TemplateResult {
+        return html`${this.message}`;
     }
 }
