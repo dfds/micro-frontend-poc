@@ -33,7 +33,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include=".babelrc" />
     <Content Include=".gitignore" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
