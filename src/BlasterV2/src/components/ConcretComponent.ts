@@ -1,15 +1,15 @@
 import { html, property, customElement, TemplateResult } from "lit-element";
-import { WebComponent } from "minions.core/components/WebComponent";
+import { WebComponent } from "minions-core/lib/components/WebComponent";
 
-@customElement("foo")
+@customElement("dfds-concret-component")
 export class ConcretComponent extends WebComponent {
     constructor() {
         super();
     }
 
-    @property({ type: String }) message = "Hello world";
+    @property({ type: String }) message = "Hello, World!";
 
     render(): TemplateResult {
-        return html`${this.message}`;
+        return html`<h1>${this.message}</h1>`;
     }
 }

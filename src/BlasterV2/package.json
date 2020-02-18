@@ -1,6 +1,6 @@
 {
-  "name": "blaster-v2",
-  "version": "0.0.0",
+  "name": "dfds-blaster-v2",
+  "version": "0.0.3",
   "description": "BlasterV2.",
   "author": {
     "name": "DFDS Development Excellence Department"
@@ -14,9 +14,12 @@
     "build": "tsc --build",
     "clean": "tsc --build --clean"
   },
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "lit-element": "^2.2.1",
-    "minions-core": "^0.0.3"
+    "minions-core": "^0.0.11"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",
