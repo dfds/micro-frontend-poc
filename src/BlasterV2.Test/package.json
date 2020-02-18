@@ -1,7 +1,7 @@
 {
-  "name": "minions-test",
+  "name": "blaster-v2-test",
   "version": "0.0.0",
-  "description": "Minions.Core test project.",
+  "description": "BlasterV2 test",
   "author": {
     "name": "DFDS Development Excellence Department"
   },
@@ -27,9 +27,7 @@
     "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
-    "sinon": "^8.1.1",
     "deepmerge": "^4.2.2",
-    "rollup": "^1.31.1",
     "karma": "^4.4.1",
     "karma-chai": "^0.1.0",
     "karma-mocha": "^1.3.0",

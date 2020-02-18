@@ -3,14 +3,14 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>BlasterV2</Name>
-    <RootNamespace>BlasterV2</RootNamespace>
+    <Name>Minions.Core.Test</Name>
+    <RootNamespace>Minions.Core.Test</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>866fa935-b742-43e3-96e5-f82afcaacef8</ProjectGuid>
+    <ProjectGuid>{8e3f1c6e-de1a-4f32-a414-b7921d93e767}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>
     </StartupFile>
@@ -32,18 +32,18 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="karma.conf.cjs" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\components\ConcretComponent.ts">
-      <SubType>Code</SubType>
-    </TypeScriptCompile>
+    <Folder Include="src\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\" />
-    <Folder Include="src\components\" />
+    <TypeScriptCompile Include="src\simple.test.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

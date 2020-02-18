@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extension", "Extension", "{
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Extension.React", "src\Minions.Extension.React\Minions.Extension.React.njsproj", "{4CA1B9DE-C6A6-4D4B-B094-D0A59F7DB29B}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "BlasterV2.Test", "src\BlasterV2.Test\BlasterV2.Test.njsproj", "{8E3F1C6E-DE1A-4F32-A414-B7921D93E767}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4CA1B9DE-C6A6-4D4B-B094-D0A59F7DB29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CA1B9DE-C6A6-4D4B-B094-D0A59F7DB29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CA1B9DE-C6A6-4D4B-B094-D0A59F7DB29B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E3F1C6E-DE1A-4F32-A414-B7921D93E767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E3F1C6E-DE1A-4F32-A414-B7921D93E767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E3F1C6E-DE1A-4F32-A414-B7921D93E767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E3F1C6E-DE1A-4F32-A414-B7921D93E767}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{866FA935-B742-43E3-96E5-F82AFCAACEF8} = {30E9727E-B2C8-4A29-BFCC-CE82823389F1}
 		{15857E3B-7C40-4351-91A8-EF377ADB113F} = {F82FC5DC-6F76-4AA9-8D55-4699F02D6D79}
 		{4CA1B9DE-C6A6-4D4B-B094-D0A59F7DB29B} = {C260EF60-89B8-4C67-AFAA-E37F43D0562F}
+		{8E3F1C6E-DE1A-4F32-A414-B7921D93E767} = {30E9727E-B2C8-4A29-BFCC-CE82823389F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86BEED0F-75DF-4810-99B7-03122D359B70}

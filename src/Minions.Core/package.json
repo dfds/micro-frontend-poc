@@ -1,14 +1,14 @@
 {
-  "name": "minions.core",
-  "version": "0.0.1",
-  "description": "Component framework for micro frontend architecture",
+  "name": "minions-core",
+  "version": "0.0.3",
+  "description": "Component framework for micro frontend architecture.",
   "author": {
-    "name": "Tobias Andersen"
+    "name": "DFDS Development Excellence Department"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ZaradarDFDS/micro-frontend-poc.git"
+    "url": "git@github.com:dfds/micro-frontend-poc.git"
   },
   "type": "module",
   "scripts": {
