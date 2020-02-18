@@ -9,7 +9,7 @@
     "build": "tsc --build"
   },
   "dependencies": {
-    "minions.core": "0.0.0"
+    "minions.core": "^0.0.1"
   },
   "devDependencies": {
     "lit-analyzer": "^1.1.9",
