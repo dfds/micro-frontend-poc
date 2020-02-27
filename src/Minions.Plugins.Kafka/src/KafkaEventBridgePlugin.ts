@@ -6,10 +6,6 @@ export default class KafkaEventBridgePlugin implements IPlugin {
     }
 
     get options(): any {
-        return { endpoint: "foo", topic: "bra" };
-    }
-
-    constructor() {
-        var socket = new SockJS();
+        return { capabilityId: "foobar-xueqz", topic: "bro" };
     }
 }
