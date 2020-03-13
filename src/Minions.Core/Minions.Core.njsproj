@@ -45,8 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\components\WebComponent.ts" />
+    <TypeScriptCompile Include="src\events\SubscriberCallback.ts" />
+    <TypeScriptCompile Include="src\events\IEvent.ts" />
     <TypeScriptCompile Include="src\events\IPublisher.ts" />
     <TypeScriptCompile Include="src\events\ISubscriber.ts" />
+    <TypeScriptCompile Include="src\IMinionOptions.ts" />
     <TypeScriptCompile Include="src\Minion.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>

@@ -35,10 +35,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />
-    <Folder Include="src\publish\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\publish\KafkaEventPublisher.ts" />
+    <TypeScriptCompile Include="src\KafkaEventBridgeOptions.ts" />
+    <TypeScriptCompile Include="src\KafkaEventBridge.ts" />
+    <TypeScriptCompile Include="src\KafkaEventBridgePluginOptions.ts" />
     <TypeScriptCompile Include="src\KafkaEventBridgePluginLoader.ts" />
     <TypeScriptCompile Include="src\KafkaEventBridgePlugin.ts">
       <SubType>Code</SubType>

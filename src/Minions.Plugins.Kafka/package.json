@@ -14,9 +14,7 @@
     "build": "tsc --build"
   },
   "dependencies": {
-    "minions-core": "^0.0.11",
-    "sockjs-client": "^1.4.0",
-    "stomp-websocket": "^2.3.4-next"
+    "minions-core": "latest"
   },
   "devDependencies": {
     "lit-analyzer": "^1.1.9",

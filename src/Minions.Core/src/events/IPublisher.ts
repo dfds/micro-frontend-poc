@@ -1,6 +1,7 @@
+import IEvent from "./IEvent";
+
 interface IPublisher {
-    name: string;
-    options?: any;
+    publish(event: IEvent): Promise<boolean>;
 }
 
 export default IPublisher;

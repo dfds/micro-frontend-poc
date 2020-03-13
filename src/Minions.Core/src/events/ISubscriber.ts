@@ -1,6 +1,7 @@
-interface ISubscriber {
-    name: string;
-    options?: any;
+import SubscriberCallback from "./SubscriberCallback";
+
+interface ISubscriber{
+    subscribe(callback: SubscriberCallback): boolean;
 }
 
 export default ISubscriber;

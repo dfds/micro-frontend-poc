@@ -1,11 +1,12 @@
 import { LitElement } from "lit-element";
 import IPlugin from "./plugins/IPlugin";
 import IPluginLoader from "./plugins/IPluginLoader";
+import IMinionOptions from "./IMinionOptions";
 
 //IDEA.TODO: Read this @ https://www.typescriptlang.org/docs/handbook/mixins.html
 //IDEA.TODO: Read this @ https://mariusschulz.com/blog/mixin-classes-in-typescript
-export abstract class Minion extends LitElement {
-    protected readonly options: IOptions | undefined;
+export default abstract class Minion extends LitElement {
+    protected readonly options: IMinionOptions | undefined;
 
     get plugins(): IPlugin[] | undefined {
         if (this.options !== undefined) {
@@ -23,25 +24,25 @@ export abstract class Minion extends LitElement {
         return undefined;
     }
 
-    protected constructor(options?: IOptions, loader?: IPluginLoader) {
+    protected constructor(options?: IMinionOptions, loaders?: IPluginLoader[]) {
         super();
 
         this.options = options;
 
         if (this.plugins !== undefined) {
             this.plugins.forEach((plugin: any) => {
-                if (loader !== undefined) {
-                    if (loader.canLoad(plugin))
-                    {
-                        loader.load(plugin);
+                const loader: IPluginLoader | undefined = loaders?.find((item: IPluginLoader) => {
+                    if (item.canLoad(plugin)) {
+                        return item;
                     }
+
+                    return undefined;
+                });
+
+                if (loader) {
+                    loader.load(plugin, this);
                 }
             });
         }
     }
-}
-
-export interface IOptions {
-    identifier: string;
-    plugins?: IPlugin[];
 }

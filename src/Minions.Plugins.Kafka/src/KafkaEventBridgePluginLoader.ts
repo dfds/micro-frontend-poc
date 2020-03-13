@@ -1,18 +1,19 @@
 import IPlugin from "minions-core/lib/plugins/IPlugin";
 import IPluginLoader from "minions-core/lib/plugins/IPluginLoader";
+import KafkaEventBridgePlugin, { pluginIdentifier } from "./KafkaEventBridgePlugin";
 
 export default class KafkaEventBridgePluginLoader implements IPluginLoader {
     canLoad(plugin: IPlugin): boolean {
-        return this.validateOptions(plugin.options);
+        return (plugin as KafkaEventBridgePlugin) !== undefined;
     }
 
-    load(plugin: IPlugin): void {
-        throw new Error("Method not implemented.");
-    }
-
-    private validateOptions(options: any): boolean {
-        
-
-        return true;
+    load(plugin: IPlugin, context?: any): Promise<void> {
+        return new Promise<void>((resolve, reject) => {
+            if (plugin.name === pluginIdentifier) {
+                plugin.initialize(context).then(resolve, reject);
+            } else {
+                reject("Unsupported plugin");
+            }
+        });
     }
 }

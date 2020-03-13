@@ -1,6 +1,6 @@
 {
   "name": "dfds-blaster-v2",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "BlasterV2.",
   "author": {
     "name": "DFDS Development Excellence Department"
@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "lit-element": "^2.2.1",
-    "minions-core": "^0.0.11"
+    "minions-core": "latest"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",

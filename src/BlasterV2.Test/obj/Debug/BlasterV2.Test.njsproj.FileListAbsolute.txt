@@ -1,0 +1,1 @@
+C:\Users\tobia\Source\Repos\micro-frontend-poc\src\BlasterV2.Test\bin\Microsoft.NodejsTools.WebRole.dll

@@ -1,6 +1,6 @@
 {
   "name": "minions-core",
-  "version": "0.0.11",
+  "version": "0.0.20",
   "description": "Component framework for micro frontend architecture.",
   "author": {
     "name": "DFDS Development Excellence Department"
