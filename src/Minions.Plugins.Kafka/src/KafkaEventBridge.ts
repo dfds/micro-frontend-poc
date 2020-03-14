@@ -8,10 +8,10 @@ export default class KafkaEventBridge extends HTMLElement implements IPublisher,
     private callbacks: Array<SubscriberCallback>;
     private webSocket: WebSocket;
     
-    constructor(options?: KafkaEventBridgeOptions) {
+    constructor(options: KafkaEventBridgeOptions) {
         super();
 
-        this.webSocket = new WebSocket((options?.endpoint as string));
+        this.webSocket = new WebSocket(options.signalREndpoint);
     }
 
     publish(event: IEvent): Promise<boolean> {
