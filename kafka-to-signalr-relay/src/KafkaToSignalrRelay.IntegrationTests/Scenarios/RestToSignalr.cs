@@ -1,39 +1,46 @@
 using System;
+using System.Threading.Tasks;
+using KafkaToSignalrRelay.IntegrationTests.Infrastructure;
 using Xunit;
 
 namespace KafkaToSignalrRelay.IntegrationTests.Scenarios
 {
     public class RestToSignalr
     {
-        private SignalrClient.SignalrClient _signalrClient;
+        private SignalrClient _signalrClient;
+        private RestClient _restClient;
 
         [Fact]
-        public void RestToSignalrRecipe()
+        public async Task RestToSignalrRecipe()
         {
-            GivenASignalrClient();
-            AndARestClient();
-            WhenAEventIsPostedToTheRestEndpoint();
-            ThenTheEventIsPublishedOnSignalr();
+                  GivenASignalrClient();
+                  AndARestClient();
+            await WhenAEventIsPostedToTheRestEndpoint();
+                  ThenTheEventIsPublishedOnSignalr();
         }
 
         private void GivenASignalrClient()
         {
-            _signalrClient = new SignalrClient.SignalrClient(new Uri("http://localhost:5000/events/signalr-hub"));
+            _signalrClient = new SignalrClient(new Uri("http://localhost:5000/events/signalr-hub"));
         }
 
         private void AndARestClient()
         {
-            throw new System.NotImplementedException();
+            _restClient = new RestClient(new Uri("http://localhost:5000/"));
         }
 
-        private void WhenAEventIsPostedToTheRestEndpoint()
+        private async Task WhenAEventIsPostedToTheRestEndpoint()
         {
-            throw new System.NotImplementedException();
+            var @event = new
+            {
+                time = DateTime.Now.ToString("s")
+            };
+            await _restClient.PostEventAsync(@event);
         }
 
         private void ThenTheEventIsPublishedOnSignalr()
         {
-            throw new System.NotImplementedException();
+          Assert.NotEmpty(_signalrClient.Events);
         }
     }
 }

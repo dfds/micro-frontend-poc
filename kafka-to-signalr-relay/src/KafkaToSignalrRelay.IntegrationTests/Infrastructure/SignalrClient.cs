@@ -1,22 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.SignalR.Client;
 
-namespace KafkaToSignalrRelay.SignalrClient
+namespace KafkaToSignalrRelay.IntegrationTests.Infrastructure
 {
     public class SignalrClient
     {
         private HubConnection _hubConnection;
 
+        public List<object> Events = new List<object>();
         public SignalrClient(Uri hubUrl)
         {
             _hubConnection = new HubConnectionBuilder()
                 .WithUrl(hubUrl)
                 .Build();
 
-            _hubConnection.On<object>("ReceiveMessage",
+            _hubConnection.On<object>(
+                "ReceiveMessage",
                 o =>
                 {
-                    Console.WriteLine(o);        
+                    Events.Add(o);
                 }
             );
         }
