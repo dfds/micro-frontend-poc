@@ -13,20 +13,23 @@ export default class KafkaEventBridgePlugin implements IPlugin {
         this.options = options;
     }
 
-    public initialize(context?: any): Promise<void> {
-        return new Promise<void>((resolve) => {
+    initialize(context?: any): Promise<void> {
+        return new Promise<void>((resolve, reject) => {
             if (context instanceof HTMLElement) {
                 const eventBridgeOptions = new KafkaEventBridgeOptions();
                 eventBridgeOptions.signalREndpoint = this.options.signalREndpoint;
-                
+
                 const eventBridgeNode = context.appendChild(new KafkaEventBridge(eventBridgeOptions));
 
                 this.options.domEventMap.forEach((eventName: string) => {
                     context.addEventListener(eventName, eventBridgeNode);
                 });
-
-                resolve();
             }
+            else if (context !== undefined) {
+                reject("Unsupported context");
+            }
+
+            resolve();
         });
     }
 }

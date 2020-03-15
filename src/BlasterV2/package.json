@@ -18,8 +18,7 @@
     "lib"
   ],
   "dependencies": {
-    "lit-element": "^2.2.1",
-    "minions-core": "latest"
+    "minions-core": "0.0.21"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",
