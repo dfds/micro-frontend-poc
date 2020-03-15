@@ -8,11 +8,6 @@ namespace KafkaToSignalrRelay.RestApi.Controllers
     [Route("[controller]")]
     public class EventsController : ControllerBase
     {
-        public EventsController()
-        {
-        }
-
-
         [HttpPost]
         public async Task<ActionResult> AddEvent([FromBody] object @event)
         {
