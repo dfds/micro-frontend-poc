@@ -18,6 +18,6 @@
   },
   "devDependencies": {
     "lit-analyzer": "^1.1.9",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.3"
   }
 }

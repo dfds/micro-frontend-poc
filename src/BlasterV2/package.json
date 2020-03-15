@@ -18,11 +18,11 @@
     "lib"
   ],
   "dependencies": {
-    "minions-core": "0.0.21"
+    "minions-core": "0.0.22"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",
-    "lit-analyzer": "^1.1.9",
-    "typescript": "^3.7.2"
+    "lit-analyzer": "^1.1.10",
+    "typescript": "^3.8.3"
   }
 }
