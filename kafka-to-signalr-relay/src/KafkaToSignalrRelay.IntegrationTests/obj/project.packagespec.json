@@ -17,7 +17,11 @@
     },
     "frameworks": {
       "netcoreapp2.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Tests/KafkaToSignalrRelay.SignalrClient/KafkaToSignalrRelay.SignalrClient.csproj": {
+            "projectPath": "/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Tests/KafkaToSignalrRelay.SignalrClient/KafkaToSignalrRelay.SignalrClient.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
