@@ -1,9 +1,12 @@
+using System;
 using Xunit;
 
 namespace KafkaToSignalrRelay.IntegrationTests.Scenarios
 {
     public class RestToSignalr
     {
+        private SignalrClient.SignalrClient _signalrClient;
+
         [Fact]
         public void RestToSignalrRecipe()
         {
@@ -15,7 +18,7 @@ namespace KafkaToSignalrRelay.IntegrationTests.Scenarios
 
         private void GivenASignalrClient()
         {
-            throw new System.NotImplementedException();
+            _signalrClient = new SignalrClient.SignalrClient(new Uri("http://localhost:5000/events/signalr-hub"));
         }
 
         private void AndARestClient()
