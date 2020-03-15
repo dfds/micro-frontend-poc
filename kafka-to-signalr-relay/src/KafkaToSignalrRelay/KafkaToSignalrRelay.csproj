@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Infrastructure\KafkaToSignalrRelay.RestApi\KafkaToSignalrRelay.RestApi.csproj" />
+      <ProjectReference Include="..\Infrastructure\KafkaToSignalrRelay.SignalrHub\KafkaToSignalrRelay.SignalrHub.csproj" />
     </ItemGroup>
 
 </Project>
