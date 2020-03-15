@@ -1,7 +1,7 @@
 {
-  "name": "minions-test",
-  "version": "0.0.0",
-  "description": "Minions.Core test project.",
+  "name": "minions-core-test",
+  "version": "0.0.1",
+  "description": "Minions.Core.Test.",
   "author": {
     "name": "DFDS Development Excellence Department"
   },

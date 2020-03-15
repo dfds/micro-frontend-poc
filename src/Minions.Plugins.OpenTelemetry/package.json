@@ -1,7 +1,7 @@
 {
-  "name": "minions-plugins-kafka",
+  "name": "minions-plugins-opentelemetry",
   "version": "0.0.1",
-  "description": "Minions.Plugins.Kafka.",
+  "description": "Minions.Plugins.OpenTelemetry.",
   "author": {
     "name": "DFDS Development Excellence Department"
   },
