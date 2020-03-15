@@ -9,5 +9,9 @@
       <Folder Include="Properties" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\KafkaToSignalrRelay.Domain\KafkaToSignalrRelay.Domain.csproj" />
+    </ItemGroup>
+
 
 </Project>
