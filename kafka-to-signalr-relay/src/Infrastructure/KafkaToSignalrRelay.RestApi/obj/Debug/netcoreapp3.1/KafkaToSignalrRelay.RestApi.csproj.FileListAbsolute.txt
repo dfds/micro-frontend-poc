@@ -1,0 +1,15 @@
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/bin/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/bin/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.deps.json
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/bin/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.runtimeconfig.json
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/bin/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.runtimeconfig.dev.json
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/bin/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.dll
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/bin/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.pdb
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/obj/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.csprojAssemblyReference.cache
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/obj/Debug/netcoreapp3.1/staticwebassets/KafkaToSignalrRelay.RestApi.StaticWebAssets.Manifest.cache
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/obj/Debug/netcoreapp3.1/staticwebassets/KafkaToSignalrRelay.RestApi.StaticWebAssets.xml
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/obj/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.MvcApplicationPartsAssemblyInfo.cache
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/obj/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.AssemblyInfoInputs.cache
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/obj/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.AssemblyInfo.cs
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/obj/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.RazorTargetAssemblyInfo.cache
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/obj/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.dll
+/home/kim/projects/micro-frontend-poc/kafka-to-signalr-relay/src/Infrastructure/KafkaToSignalrRelay.RestApi/obj/Debug/netcoreapp3.1/KafkaToSignalrRelay.RestApi.pdb
