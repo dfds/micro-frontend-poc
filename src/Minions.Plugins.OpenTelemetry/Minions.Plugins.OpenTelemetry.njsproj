@@ -37,6 +37,8 @@
     <Folder Include="src\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\OpenTelemetryClient.ts" />
+    <TypeScriptCompile Include="src\OpenTelemetryClientOptions.ts" />
     <TypeScriptCompile Include="src\OpenTelemetryPlugin.ts" />
     <TypeScriptCompile Include="src\OpenTelemetryPluginLoader.ts" />
     <TypeScriptCompile Include="src\OpenTelemetryPluginOptions.ts" />

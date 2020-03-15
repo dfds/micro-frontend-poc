@@ -39,7 +39,7 @@ export default class KafkaEventBridge extends HTMLElement implements IPublisher,
     }
 
     handleEvent(domEvent: Event): void {
-        //TODO: Implement concept for intercepting DOM events and mapping them to commands in the KafkaEventBridge.
+        //TODO: Implement concept for intercepting DOM events and mapping them to commands.
         console.log(domEvent, this.id);
     }
 }
