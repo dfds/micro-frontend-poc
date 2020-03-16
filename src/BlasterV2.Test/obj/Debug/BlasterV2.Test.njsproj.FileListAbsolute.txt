@@ -1,0 +1,2 @@
+C:\Users\toban\source\repos\micro-frontend-poc\src\BlasterV2.Test\obj\Debug\BlasterV2.Test.njsprojAssemblyReference.cache
+C:\Users\toban\source\repos\micro-frontend-poc\src\BlasterV2.Test\bin\Microsoft.NodejsTools.WebRole.dll

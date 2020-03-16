@@ -18,7 +18,8 @@
     "lib"
   ],
   "dependencies": {
-    "minions-core": "0.0.22"
+    "minions-core": "0.0.26",
+    "minions-plugins-kafka": "0.0.5"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",

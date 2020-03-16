@@ -36,6 +36,7 @@ export default class KafkaEventBridge extends HTMLElement implements IPublisher,
         });
     }
 
+    //TODO: Figure out how to best expose this.
     subscribe(callback: SubscriberCallback): boolean {
         const currentCount = this.callbacks.length;
 
@@ -43,7 +44,11 @@ export default class KafkaEventBridge extends HTMLElement implements IPublisher,
     }
 
     handleEvent(domEvent: Event): void {
-        //TODO: Implement concept for intercepting DOM events and mapping them to commands.
-        console.log(domEvent, this.id);
+        this.publish({
+            id: domEvent.type,
+            version: domEvent.timeStamp.toString(),
+            payload: (domEvent as CustomEvent).detail,
+            source: domEvent.srcElement
+        });
     }
 }

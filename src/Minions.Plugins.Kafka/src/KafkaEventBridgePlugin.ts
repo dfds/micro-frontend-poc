@@ -21,7 +21,7 @@ export default class KafkaEventBridgePlugin implements IPlugin {
 
                 const eventBridgeNode = context.appendChild(new KafkaEventBridge(eventBridgeOptions));
 
-                this.options.domEventMap.forEach((eventName: string) => {
+                this.options.domEventMap?.forEach((eventName: string) => {
                     context.addEventListener(eventName, eventBridgeNode);
                 });
             }
