@@ -8,7 +8,8 @@ namespace KafkaToSignalrRelay.IntegrationTests.Infrastructure
     {
         private HubConnection _hubConnection;
 
-        public List<object> Events = new List<object>();
+        public readonly List<object> Events = new List<object>();
+
         public SignalrClient(Uri hubUrl)
         {
             _hubConnection = new HubConnectionBuilder()
@@ -17,11 +18,10 @@ namespace KafkaToSignalrRelay.IntegrationTests.Infrastructure
 
             _hubConnection.On<object>(
                 "ReceiveMessage",
-                o =>
-                {
-                    Events.Add(o);
-                }
+                o => { Events.Add(o); }
             );
+
+            _hubConnection.StartAsync().Wait();
         }
     }
 }

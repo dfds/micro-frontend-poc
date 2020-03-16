@@ -16,8 +16,6 @@ namespace KafkaToSignalrRelay
             services.AddRestApi();
             
             services.AddSignalrHub();
-
-            services.AddSingleton<IEventSink>(new ConsoleEventSink());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

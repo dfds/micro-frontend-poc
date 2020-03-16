@@ -6,7 +6,7 @@ namespace KafkaToSignalrRelay
 {
     public class ConsoleEventSink : IEventSink
     {
-        public Task ReceiveEvent(object @event)
+        public Task ReceiveEventAsync(object @event)
         {
             Console.WriteLine(@event);
             

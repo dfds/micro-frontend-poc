@@ -33,14 +33,14 @@ namespace KafkaToSignalrRelay.IntegrationTests.Scenarios
         {
             var @event = new
             {
-                time = DateTime.Now.ToString("s")
+                Time = DateTime.Now.ToString("s")
             };
             await _restClient.PostEventAsync(@event);
         }
 
         private void ThenTheEventIsPublishedOnSignalr()
         {
-          Assert.NotEmpty(_signalrClient.Events);
+            Assert.NotEmpty(_signalrClient.Events);
         }
     }
 }

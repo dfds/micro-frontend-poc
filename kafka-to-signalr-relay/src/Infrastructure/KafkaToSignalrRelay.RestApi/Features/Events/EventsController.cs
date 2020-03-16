@@ -17,7 +17,7 @@ namespace KafkaToSignalrRelay.RestApi.Controllers
         [HttpPost]
         public async Task<ActionResult> AddEvent([FromBody] object @event)
         {
-            await _enventSink.ReceiveEvent(@event);
+            await _enventSink.ReceiveEventAsync(@event);
             return Ok(@event);
         }
     }
