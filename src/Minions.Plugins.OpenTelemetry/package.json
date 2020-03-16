@@ -14,14 +14,17 @@
     "build": "tsc --build"
   },
   "dependencies": {
+    "@opentelemetry/api": "^0.4.0",
+    "@opentelemetry/exporter-collector": "^0.4.0",
     "@opentelemetry/plugin-document-load": "^0.4.0",
-    "@opentelemetry/plugin-user-interaction": "^0.4.0",
     "@opentelemetry/plugin-xml-http-request": "^0.4.0",
+    "@opentelemetry/scope-base": "^0.4.0",
     "@opentelemetry/tracing": "^0.4.0",
     "@opentelemetry/web": "^0.4.0",
     "minions-core": "0.0.22"
   },
   "devDependencies": {
+    "@types/node": "^13.9.1",
     "lit-analyzer": "^1.1.9",
     "typescript": "^3.7.5"
   }

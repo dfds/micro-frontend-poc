@@ -34,8 +34,10 @@ export default class KafkaEventBridge extends HTMLElement implements IPublisher,
         });
     }
 
-    subscribe(callback: SubscriberCallback): any {
-        this.callbacks.push(callback);
+    subscribe(callback: SubscriberCallback): boolean {
+        const currentCount = this.callbacks.length;
+
+        return this.callbacks.push(callback) > currentCount;
     }
 
     handleEvent(domEvent: Event): void {
