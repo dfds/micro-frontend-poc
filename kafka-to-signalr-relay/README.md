@@ -10,7 +10,7 @@ The service works as a part of DFDS Development excellence departments self serv
 
 ## Usage
 
-start assembly by running the command: `dotnet run --project src/KafkaToSignalrRelay` in this directory
+start assembly by running the command: `KAFKA_TO_SIGNALR_RELAY_START_KAFKA_CONSUMER=false dotnet run --project src/KafkaToSignalrRelay` in this directory
 
 ## Tests
 
