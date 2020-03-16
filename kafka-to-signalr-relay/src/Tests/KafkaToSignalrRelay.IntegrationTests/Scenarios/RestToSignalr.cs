@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using KafkaToSignalrRelay.IntegrationTests.Infrastructure;
 using Xunit;
@@ -15,8 +17,8 @@ namespace KafkaToSignalrRelay.IntegrationTests.Scenarios
         {
                   GivenASignalrClient();
                   AndARestClient();
-            await WhenAEventIsPostedToTheRestEndpoint();
-                  ThenTheEventIsPublishedOnSignalr();
+            await WhenAEventIsPostedToTheRestEndpoint(); 
+            await ThenTheEventIsPublishedOnSignalr();
         }
 
         private void GivenASignalrClient()
@@ -38,9 +40,18 @@ namespace KafkaToSignalrRelay.IntegrationTests.Scenarios
             await _restClient.PostEventAsync(@event);
         }
 
-        private void ThenTheEventIsPublishedOnSignalr()
+        private async Task ThenTheEventIsPublishedOnSignalr()
         {
-            Assert.NotEmpty(_signalrClient.Events);
+            var events = await TimeElapsed.DoForTimespanOrNotNull(
+                timeSpan:TimeSpan.FromSeconds(3),
+                function:async () => 
+                    _signalrClient.Events.Any() ? 
+                        _signalrClient.Events : 
+                        null
+            );
+
+            Assert.NotEmpty(events);
+
         }
     }
 }
