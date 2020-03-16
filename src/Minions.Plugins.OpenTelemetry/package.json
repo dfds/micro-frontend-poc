@@ -10,9 +10,13 @@
     "type": "git",
     "url": "git@github.com:dfds/micro-frontend-poc.git"
   },
+  "type": "module",
   "scripts": {
     "build": "tsc --build"
   },
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "@opentelemetry/api": "^0.4.0",
     "@opentelemetry/exporter-collector": "^0.4.0",
