@@ -2,7 +2,6 @@ import { XMLHttpRequestPluginConfig } from "@opentelemetry/plugin-xml-http-reque
 import { ScopeManager } from "@opentelemetry/scope-base";
 
 export default class OpenTelemetryClientOptions implements XMLHttpRequestPluginConfig {
-    openTelemetryEndpoint: string = "";
     clearTimingResources?: boolean;
     propagateTraceHeaderCorsUrls?: any;
     defaultScopeManager?: ScopeManager;

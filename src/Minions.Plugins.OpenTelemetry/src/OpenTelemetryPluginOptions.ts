@@ -1,3 +1,4 @@
 export default class OpenTelemetryPluginOptions {
-    openTelemetryEndpoint: string = "";
+    clearTimingResources?: boolean;
+    propagateTraceHeaderCorsUrls?: any;
 }

@@ -6,7 +6,7 @@ import { CollectorExporter } from "@opentelemetry/exporter-collector";
 import { DocumentLoad } from "@opentelemetry/plugin-document-load";
 import { XMLHttpRequestPlugin } from "@opentelemetry/plugin-xml-http-request";
 
-export default class OpenTelemetryClient implements EventListenerObject {
+export default class OpenTelemetryClient {
     private readonly options: OpenTelemetryClientOptions;
 
     constructor(options: OpenTelemetryClientOptions) {
@@ -24,10 +24,5 @@ export default class OpenTelemetryClient implements EventListenerObject {
         provider.addSpanProcessor(new SimpleSpanProcessor(new CollectorExporter()));
 
         Api.trace.initGlobalTracerProvider(provider);
-    }
-
-    handleEvent(domEvent: Event): void {
-        //TODO: Implement concept for intercepting DOM events and mapping them to commands.
-        console.log(domEvent, this);
     }
 }

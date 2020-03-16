@@ -12,7 +12,10 @@ export default class ConcretComponent extends WebComponent {
     constructor() {
         super({
             identifier: componentIdentifier,
-            plugins: [new KafkaEventBridgePlugin({ signalREndpoint: "wss://", domEventMap: [componentIdentifier] })]
+            plugins: [new KafkaEventBridgePlugin({
+                signalREndpoint: "wss://",
+                domEventMap: [componentIdentifier]
+            })]
         },
         [new KafkaEventBridgePluginLoader()]);
     }
