@@ -7,11 +7,13 @@ import KafkaEventBridgeOptions from "./KafkaEventBridgeOptions";
 export default class KafkaEventBridge extends HTMLElement implements IPublisher, ISubscriber, EventListenerObject {
     private readonly callbacks: Array<SubscriberCallback> = new Array<SubscriberCallback>();
     private readonly webSocket: WebSocket;
+    private readonly options: KafkaEventBridgeOptions;
     
     constructor(options: KafkaEventBridgeOptions) {
         super();
 
-        this.webSocket = new WebSocket(options.signalREndpoint);
+        this.options = options;
+        this.webSocket = new WebSocket(this.options.signalREndpoint);
 
         this.webSocket.onmessage = (event) => {
             const payload = event.data as IEvent;

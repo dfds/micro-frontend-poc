@@ -6,14 +6,17 @@ import { CollectorExporter } from "@opentelemetry/exporter-collector";
 import { DocumentLoad } from "@opentelemetry/plugin-document-load";
 import { XMLHttpRequestPlugin } from "@opentelemetry/plugin-xml-http-request";
 
-export default class OpenTelemetryClient {
+export default class OpenTelemetryClient implements EventListenerObject {
+    private readonly options: OpenTelemetryClientOptions;
+
     constructor(options: OpenTelemetryClientOptions) {
-        console.log(options)
+        this.options = options;
+
         const provider = new WebTracerProvider({
-            scopeManager: options?.defaultScopeManager,
+            scopeManager: this.options?.defaultScopeManager,
             plugins: [
                 new DocumentLoad(),
-                new XMLHttpRequestPlugin(options) as any
+                new XMLHttpRequestPlugin(this.options) as any
             ]
         });
 
@@ -21,5 +24,10 @@ export default class OpenTelemetryClient {
         provider.addSpanProcessor(new SimpleSpanProcessor(new CollectorExporter()));
 
         Api.trace.initGlobalTracerProvider(provider);
+    }
+
+    handleEvent(domEvent: Event): void {
+        //TODO: Implement concept for intercepting DOM events and mapping them to commands.
+        console.log(domEvent, this);
     }
 }

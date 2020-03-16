@@ -1,5 +1,7 @@
 import IPlugin from "minions-core/lib/plugins/IPlugin";
 import OpenTelemetryPluginOptions from "./OpenTelemetryPluginOptions";
+import OpenTelemetryClient from "./OpenTelemetryClient";
+import OpenTelemetryClientOptions from "./OpenTelemetryClientOptions";
 
 export const pluginIdentifier: string = "OpenTelemetryPlugin";
 
@@ -13,8 +15,10 @@ export default class OpenTelemetryPlugin implements IPlugin {
 
     initialize(context?: any): Promise<void> {
         return new Promise<void>((resolve) => {
-            //TODO: Implement plugin
-            console.log(context);
+            const openTelemetryClientOptions = new OpenTelemetryClientOptions();
+            const openTelemetryClient = new OpenTelemetryClient(openTelemetryClientOptions);
+            
+            console.log(openTelemetryClient, context);
 
             resolve();
         });
