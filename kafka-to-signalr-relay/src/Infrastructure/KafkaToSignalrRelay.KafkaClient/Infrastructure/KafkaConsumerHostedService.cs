@@ -75,7 +75,7 @@ namespace KafkaToSignalrRelay.KafkaClient.Infrastructure
                     {
                         var eventSink =
                             scope.ServiceProvider.GetRequiredService<IEventSink>();
-                        
+
                         await eventSink.ReceiveEventAsync(msg.Value);
                         await Task.Run(() => consumer.Commit(msg), cancellationToken);
                     }
@@ -93,7 +93,18 @@ namespace KafkaToSignalrRelay.KafkaClient.Infrastructure
             _logger.LogInformation("Kafka event consumer starting");
 
 
-            _executingTask = ConsumeKafkaMessages(_cancellationTokenSource.Token);
+            _executingTask = Task.Factory.StartNew(async () =>
+            {
+                ConsumeKafkaMessages(_cancellationTokenSource.Token);
+            }, _cancellationTokenSource.Token, TaskCreationOptions.LongRunning, TaskScheduler.Default)
+            .ContinueWith(task =>
+            {
+                if (task.IsFaulted)
+                {
+                    _logger.LogError(task.Exception, "Event loop crashed");
+                }
+            }, cancellationToken);
+
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)
