@@ -1,7 +1,9 @@
 import IPlugin from "minions-core/lib/plugins/IPlugin";
+import IEvent from "minions-core/lib/events/IEvent";
 import KafkaEventBridge from "./KafkaEventBridge";
 import KafkaEventBridgePluginOptions from "./KafkaEventBridgePluginOptions";
 import KafkaEventBridgeOptions from "./KafkaEventBridgeOptions";
+import SubscriberCallback from "minions-core/lib/events/SubscriberCallback";
 
 export const pluginIdentifier: string = "KafkaEventBridgePlugin";
 
@@ -15,18 +17,27 @@ export default class KafkaEventBridgePlugin implements IPlugin {
 
     initialize(context?: any): Promise<void> {
         return new Promise<void>((resolve, reject) => {
-            if (context instanceof HTMLElement) {
-                const eventBridgeOptions = new KafkaEventBridgeOptions();
-                eventBridgeOptions.signalREndpoint = this.options.signalREndpoint;
+            const eventBridgeOptions = new KafkaEventBridgeOptions();
+            eventBridgeOptions.signalREndpoint = this.options.signalREndpoint;
 
-                const eventBridgeNode = context.appendChild(new KafkaEventBridge(eventBridgeOptions));
+            const eventBridge = new KafkaEventBridge(eventBridgeOptions);
+
+            if (context instanceof HTMLElement) {
+                const eventBridgeNode = context.appendChild(eventBridge);
 
                 this.options.domEventMap?.forEach((eventName: string) => {
                     context.addEventListener(eventName, eventBridgeNode);
                 });
             }
-            else if (context !== undefined) {
-                reject("Unsupported context");
+
+            if (context !== undefined) {
+                context.subscribe = (callback: SubscriberCallback) => {
+                    eventBridge.subscribe(callback);
+                };
+
+                context.publish = (event: IEvent) => {
+                    eventBridge.publish(event);
+                };
             }
 
             resolve();
