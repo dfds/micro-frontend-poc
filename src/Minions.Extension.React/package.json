@@ -18,7 +18,7 @@
     "lib"
   ],
   "dependencies": {
-    "minions-core": "latest"
+    "minions-core": "0.0.30"
   },
   "devDependencies": {
     "lit-analyzer": "^1.1.9",

@@ -20,21 +20,19 @@ export default class ConcretComponent extends WebComponent {
             }),
             new OpenTelemetryPlugin()]
         },
-        [new KafkaEventBridgePluginLoader(), new OpenTelemetryPluginLoader()]);
+            [new KafkaEventBridgePluginLoader(), new OpenTelemetryPluginLoader()]);
 
-        (this as any).subscribe((event: any) => {
-            return new Promise<boolean>(resolve => {
-                console.log("Recieved event", event);
-
-                resolve();
-            });
-        });
+        this.dispatchEvent(new CustomEvent(this.identifier as string, {
+            bubbles: false,
+            composed: true,
+            detail: (event: any) => { console.log(event); }
+        }));
     }
 
     onClick(){
         this.dispatchEvent(
             new CustomEvent(this.identifier as string, {
-                bubbles: true,
+                bubbles: false,
                 composed: true,
                 detail: this.message
             })

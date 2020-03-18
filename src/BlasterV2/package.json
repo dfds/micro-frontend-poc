@@ -18,8 +18,8 @@
     "lib"
   ],
   "dependencies": {
-    "minions-core": "0.0.26",
-    "minions-plugins-kafka": "0.0.5",
+    "minions-core": "0.0.30",
+    "minions-plugins-kafka": "0.0.7",
     "minions-plugins-opentelemetry": "0.0.1"
   },
   "devDependencies": {
