@@ -1,6 +1,7 @@
 import WebComponent from "minions-core/lib/components/WebComponent";
 import { html, property, customElement, TemplateResult } from "lit-element";
-
+// @ts-ignore
+import CSS from '../../style/CapabilityDashboardComponent-css.js';
 
 const componentIdentifier = "dfds-devex-capabilitydashboard-component";
 
@@ -17,6 +18,7 @@ export default class CapabilityDashboardComponent extends WebComponent {
 
     render(): TemplateResult {
         return html`
+        ${CSS}
         <div class="capabilityList">
             ${this.capabilities.map(cap => html`
             <div class="capability">
