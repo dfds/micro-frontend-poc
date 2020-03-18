@@ -1,9 +1,13 @@
-import ConcretComponent from "./components/ConcretComponent";
+//import ConcretComponent from "./components/ConcretComponent";
+import CapabilityDashboardComponent from "./components/CapabilityDashboardComponent";
 
 export default class Application {
     constructor() {
-        let component = new ConcretComponent();
+        let capDashboardComponent = new CapabilityDashboardComponent();
 
-        component.render();
+        let result = capDashboardComponent.render();
+        console.log(result);
     }
 }
+
+export {Application}
