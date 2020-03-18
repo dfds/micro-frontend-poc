@@ -1,0 +1,15 @@
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    height: 95%;
+
+    .item {
+        flex: 1;
+    }
+}

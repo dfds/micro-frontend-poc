@@ -1,4 +1,5 @@
-//import ConcretComponent from "./components/ConcretComponent";
+import '../style/application.scss';
+
 import CapabilityDashboardComponent from "./components/CapabilityDashboardComponent";
 
 export default class Application {

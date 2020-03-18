@@ -15,7 +15,8 @@
     "clean": "tsc --build --clean",
     "webpack-build": "webpack --mode production --progress --colors",
     "webpack-watch": "webpack --mode development --progress --colors --watch",
-    "webpack-serve": "webpack-dev-server --mode development --colors --progress --hot"
+    "webpack-serve": "webpack-dev-server --mode development --colors --progress --hot",
+    "sass-render": "sass-render -w --suffix '-css.js' ./style/*.scss"
   },
   "files": [
     "lib"
@@ -27,10 +28,14 @@
     "@babel/plugin-transform-classes": "^7.8.6",
     "@babel/preset-env": "^7.8.7",
     "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
     "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "minions-core": "0.0.26",
     "minions-plugins-kafka": "0.0.5",
     "minions-plugins-opentelemetry": "0.0.1",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
     "ts-loader": "^6.2.1",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",

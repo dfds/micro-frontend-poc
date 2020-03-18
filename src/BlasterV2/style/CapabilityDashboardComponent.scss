@@ -1,0 +1,11 @@
+.capabilityList {
+    display: flex;
+    flex-direction: column;
+    background-color: #ec6060;
+    height: 100%;
+    .capability {
+        h2 {
+            font-size: 1.3rem; 
+        }
+    }
+}
