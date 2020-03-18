@@ -12,15 +12,29 @@
   },
   "scripts": {
     "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "clean": "tsc --build --clean",
+    "webpack-build": "webpack --mode production --progress --colors",
+    "webpack-watch": "webpack --mode development --progress --colors --watch",
+    "webpack-serve": "webpack-dev-server --mode development --colors --progress --hot"
   },
   "files": [
     "lib"
   ],
   "dependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-transform-classes": "^7.8.6",
+    "@babel/preset-env": "^7.8.7",
+    "babel-loader": "^8.0.6",
+    "file-loader": "^6.0.0",
     "minions-core": "0.0.26",
     "minions-plugins-kafka": "0.0.5",
-    "minions-plugins-opentelemetry": "0.0.1"
+    "minions-plugins-opentelemetry": "0.0.1",
+    "ts-loader": "^6.2.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",
