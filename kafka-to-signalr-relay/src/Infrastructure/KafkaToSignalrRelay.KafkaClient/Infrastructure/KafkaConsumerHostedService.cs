@@ -42,7 +42,7 @@ namespace KafkaToSignalrRelay.KafkaClient.Infrastructure
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Faild to create kafka event consumer");
+                _logger.LogError(ex, "Failed to create kafka event consumer");
                 return;
             }
 
@@ -87,16 +87,20 @@ namespace KafkaToSignalrRelay.KafkaClient.Infrastructure
             }
         }
 
-        public async Task StartAsync(CancellationToken cancellationToken)
+        public Task StartAsync(CancellationToken cancellationToken)
         {
             _cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
             _logger.LogInformation("Kafka event consumer starting");
 
 
             _executingTask = Task.Factory.StartNew(async () =>
-            {
-                ConsumeKafkaMessages(_cancellationTokenSource.Token);
-            }, _cancellationTokenSource.Token, TaskCreationOptions.LongRunning, TaskScheduler.Default)
+                {
+                    await ConsumeKafkaMessages(_cancellationTokenSource.Token);
+                },
+                _cancellationTokenSource.Token, 
+                TaskCreationOptions.LongRunning, 
+                TaskScheduler.Default
+            )
             .ContinueWith(task =>
             {
                 if (task.IsFaulted)
@@ -105,6 +109,7 @@ namespace KafkaToSignalrRelay.KafkaClient.Infrastructure
                 }
             }, cancellationToken);
 
+            return Task.CompletedTask;
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)
