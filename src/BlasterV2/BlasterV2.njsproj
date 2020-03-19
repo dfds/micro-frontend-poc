@@ -37,6 +37,9 @@
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\Application.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\components\ConcretComponent.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>

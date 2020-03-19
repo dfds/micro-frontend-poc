@@ -1,7 +1,7 @@
-import SubscriberCallback from "./SubscriberCallback";
+import EventCallback from "./EventCallback";
 
 interface ISubscriber{
-    subscribe(callback: SubscriberCallback): boolean;
+    subscribe(callback: EventCallback): boolean;
 }
 
 export default ISubscriber;

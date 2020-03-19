@@ -1,6 +1,6 @@
 {
   "name": "minions-extension-react",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Minions.Extension.React.",
   "author": {
     "name": "DFDS Development Excellence Department"
@@ -10,14 +10,18 @@
     "type": "git",
     "url": "git@github.com:dfds/micro-frontend-poc.git"
   },
+  "type": "module",
   "scripts": {
     "build": "tsc --build"
   },
+  "files": [
+    "lib"
+  ],
   "dependencies": {
-    "minions-core": "latest"
+    "minions-core": "0.0.30"
   },
   "devDependencies": {
     "lit-analyzer": "^1.1.9",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.3"
   }
 }

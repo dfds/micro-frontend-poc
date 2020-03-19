@@ -1,0 +1,35 @@
+{
+  "name": "minions-plugins-opentelemetry",
+  "version": "0.0.1",
+  "description": "Minions.Plugins.OpenTelemetry.",
+  "author": {
+    "name": "DFDS Development Excellence Department"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dfds/micro-frontend-poc.git"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@opentelemetry/api": "^0.4.0",
+    "@opentelemetry/exporter-collector": "^0.4.0",
+    "@opentelemetry/plugin-document-load": "^0.4.0",
+    "@opentelemetry/plugin-xml-http-request": "^0.4.0",
+    "@opentelemetry/scope-base": "^0.4.0",
+    "@opentelemetry/tracing": "^0.4.0",
+    "@opentelemetry/web": "^0.4.0",
+    "minions-core": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.1",
+    "lit-analyzer": "^1.1.9",
+    "typescript": "^3.7.5"
+  }
+}

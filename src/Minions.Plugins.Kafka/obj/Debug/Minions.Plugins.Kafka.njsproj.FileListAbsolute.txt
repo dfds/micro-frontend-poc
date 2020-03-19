@@ -1,2 +1,2 @@
-C:\Users\tobia\Source\Repos\micro-frontend-poc\src\Minions.Plugins.Kafka\bin\Microsoft.NodejsTools.WebRole.dll
-C:\Users\tobia\Source\Repos\micro-frontend-poc\src\Minions.Plugins.Kafka\obj\Debug\Minions.Plugins.Kafka.njsprojAssemblyReference.cache
+C:\Users\toban\source\repos\micro-frontend-poc\src\Minions.Plugins.Kafka\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\toban\source\repos\micro-frontend-poc\src\Minions.Plugins.Kafka\obj\Debug\Minions.Plugins.Kafka.njsprojAssemblyReference.cache

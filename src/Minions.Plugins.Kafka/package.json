@@ -1,6 +1,6 @@
 {
   "name": "minions-plugins-kafka",
-  "version": "0.0.0",
+  "version": "0.0.7",
   "description": "Minions.Plugins.Kafka.",
   "author": {
     "name": "DFDS Development Excellence Department"
@@ -10,11 +10,15 @@
     "type": "git",
     "url": "git@github.com:dfds/micro-frontend-poc.git"
   },
+  "type": "module",
   "scripts": {
     "build": "tsc --build"
   },
+  "files": [
+    "lib"
+  ],
   "dependencies": {
-    "minions-core": "latest"
+    "minions-core": "0.0.30"
   },
   "devDependencies": {
     "lit-analyzer": "^1.1.9",

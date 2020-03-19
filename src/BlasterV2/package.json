@@ -18,12 +18,13 @@
     "lib"
   ],
   "dependencies": {
-    "lit-element": "^2.2.1",
-    "minions-core": "latest"
+    "minions-core": "0.0.30",
+    "minions-plugins-kafka": "0.0.7",
+    "minions-plugins-opentelemetry": "0.0.1"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",
-    "lit-analyzer": "^1.1.9",
-    "typescript": "^3.7.2"
+    "lit-analyzer": "^1.1.10",
+    "typescript": "^3.8.3"
   }
 }
