@@ -15,11 +15,19 @@ export default class CapabilityDashboardComponent extends WebComponent {
         super({
                 identifier: componentIdentifier,
                 plugins: [new KafkaEventBridgePlugin({
-                    signalREndpoint: "wss://localhost",
+                    signalREndpoint: "wss://localhost:50901/events/signalr-hub",
                     domEventMap: [componentIdentifier]
                 })]
             },
             [new KafkaEventBridgePluginLoader()]);
+
+        this.dispatchEvent(new CustomEvent(this.identifier as string, {
+            bubbles: false,
+            composed: true,
+            detail: (event: any) => {
+                console.log(event);
+            }
+        }));
     }
 
     render(): TemplateResult {
