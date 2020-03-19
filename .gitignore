@@ -290,4 +290,6 @@ $RECYCLE.BIN/
 /src/Minions.Core.Test/obj/Debug
 /src/Minions.Extension.React/obj/Debug/Minions.Extension.React.njsproj.FileListAbsolute.txt
 /src/Minions.Core/obj/Debug/Minions.Core.njsproj.FileListAbsolute.txt
-/src/Minions.Plugins.OpenTelemetry/obj/Debug
+*.pdb
+obj/
+bin/

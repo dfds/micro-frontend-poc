@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{42815DD2-8293-48E9-9F28-D61C3D563C6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{42815DD2-8293-48E9-9F28-D175407086AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaToSignalrRelay.RestApi", "Infrastructure\KafkaToSignalrRelay.RestApi\KafkaToSignalrRelay.RestApi.csproj", "{8EAF405E-5C64-4869-92F5-D175407086AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaToSignalrRelay", "KafkaToSignalrRelay\KafkaToSignalrRelay.csproj", "{3262404E-4DD1-49E5-A13C-C16EC6536514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaToSignalrRelay.SignalrHub", "Infrastructure\KafkaToSignalrRelay.SignalrHub\KafkaToSignalrRelay.SignalrHub.csproj", "{22750143-E4A9-4389-8868-1C8B30206F44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaToSignalrRelay.Domain", "KafkaToSignalrRelay.Domain\KafkaToSignalrRelay.Domain.csproj", "{79D3CCC8-6175-4240-BF10-6269041D0424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaToSignalrRelay.IntegrationTests", "Tests\KafkaToSignalrRelay.IntegrationTests\KafkaToSignalrRelay.IntegrationTests.csproj", "{480F3025-E968-4D85-8B4F-9088EB40434E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaToSignalrRelay.KafkaClient", "Infrastructure\KafkaToSignalrRelay.KafkaClient\KafkaToSignalrRelay.KafkaClient.csproj", "{13BA3486-E260-413F-8BAC-4803E7E1673E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EAF405E-5C64-4869-92F5-D175407086AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EAF405E-5C64-4869-92F5-D175407086AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EAF405E-5C64-4869-92F5-D175407086AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EAF405E-5C64-4869-92F5-D175407086AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3262404E-4DD1-49E5-A13C-C16EC6536514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3262404E-4DD1-49E5-A13C-C16EC6536514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3262404E-4DD1-49E5-A13C-C16EC6536514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3262404E-4DD1-49E5-A13C-C16EC6536514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22750143-E4A9-4389-8868-1C8B30206F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22750143-E4A9-4389-8868-1C8B30206F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22750143-E4A9-4389-8868-1C8B30206F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22750143-E4A9-4389-8868-1C8B30206F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D3CCC8-6175-4240-BF10-6269041D0424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D3CCC8-6175-4240-BF10-6269041D0424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D3CCC8-6175-4240-BF10-6269041D0424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D3CCC8-6175-4240-BF10-6269041D0424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{480F3025-E968-4D85-8B4F-9088EB40434E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480F3025-E968-4D85-8B4F-9088EB40434E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480F3025-E968-4D85-8B4F-9088EB40434E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480F3025-E968-4D85-8B4F-9088EB40434E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13BA3486-E260-413F-8BAC-4803E7E1673E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13BA3486-E260-413F-8BAC-4803E7E1673E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13BA3486-E260-413F-8BAC-4803E7E1673E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13BA3486-E260-413F-8BAC-4803E7E1673E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8EAF405E-5C64-4869-92F5-D175407086AB} = {42815DD2-8293-48E9-9F28-D61C3D563C6A}
+		{22750143-E4A9-4389-8868-1C8B30206F44} = {42815DD2-8293-48E9-9F28-D61C3D563C6A}
+		{13BA3486-E260-413F-8BAC-4803E7E1673E} = {42815DD2-8293-48E9-9F28-D61C3D563C6A}
+		{480F3025-E968-4D85-8B4F-9088EB40434E} = {42815DD2-8293-48E9-9F28-D175407086AB}
+	EndGlobalSection
+EndGlobal
