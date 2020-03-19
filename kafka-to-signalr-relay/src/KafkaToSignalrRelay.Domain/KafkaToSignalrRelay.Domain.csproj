@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Features\Events\Domain\**" />
+      <EmbeddedResource Remove="Features\Events\Domain\**" />
+      <None Remove="Features\Events\Domain\**" />
+    </ItemGroup>
+
+</Project>

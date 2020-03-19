@@ -1,0 +1,10 @@
+###
+
+# Add an event
+POST http://localhost:5000/events HTTP/1.1
+content-type: application/json
+
+{
+    "CapabilityId": "{{$guid}}",
+    "CapabilityName": "Operate shipping lanes"
+}
