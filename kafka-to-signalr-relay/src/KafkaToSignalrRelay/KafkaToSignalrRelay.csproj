@@ -10,4 +10,8 @@
       <ProjectReference Include="..\Infrastructure\KafkaToSignalrRelay.SignalrHub\KafkaToSignalrRelay.SignalrHub.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Properties\" />
+    </ItemGroup>
+
 </Project>

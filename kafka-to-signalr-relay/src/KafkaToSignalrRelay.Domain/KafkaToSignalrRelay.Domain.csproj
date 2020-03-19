@@ -5,7 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Features\Events\Domain" />
+      <Compile Remove="Features\Events\Domain\**" />
+      <EmbeddedResource Remove="Features\Events\Domain\**" />
+      <None Remove="Features\Events\Domain\**" />
     </ItemGroup>
 
 </Project>

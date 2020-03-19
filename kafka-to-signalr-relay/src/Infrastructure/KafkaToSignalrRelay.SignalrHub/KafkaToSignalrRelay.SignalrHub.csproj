@@ -6,11 +6,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="Properties\launchSettings.json" />
+      <ProjectReference Include="..\..\KafkaToSignalrRelay.Domain\KafkaToSignalrRelay.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\KafkaToSignalrRelay.Domain\KafkaToSignalrRelay.Domain.csproj" />
+      <Folder Include="Properties\" />
     </ItemGroup>
 
 </Project>
