@@ -35,11 +35,14 @@
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="view\index.html" />
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\Application.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\components\CapabilityDashboardComponent.ts" />
     <TypeScriptCompile Include="src\components\ConcretComponent.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
@@ -47,6 +50,7 @@
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="src\components\" />
+    <Folder Include="view\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

@@ -4,14 +4,12 @@ import IPublisher from "minions-core/lib/events/IPublisher";
 import ISubscriber from "minions-core/lib/events/ISubscriber";
 import KafkaEventBridgeOptions from "./KafkaEventBridgeOptions";
 
-export default class KafkaEventBridge extends HTMLElement implements IPublisher, ISubscriber, EventListenerObject {
+export default class KafkaEventBridge implements IPublisher, ISubscriber, EventListenerObject {
     private readonly callbacks: Array<EventCallback> = new Array<EventCallback>();
     private readonly webSocket: WebSocket;
     private readonly options: KafkaEventBridgeOptions;
     
     constructor(options: KafkaEventBridgeOptions) {
-        super();
-
         this.options = options;
         this.webSocket = new WebSocket(this.options.signalREndpoint);
 
@@ -53,7 +51,7 @@ export default class KafkaEventBridge extends HTMLElement implements IPublisher,
                     version: domEvent.timeStamp.toString(),
                     payload: domEvent.detail,
                     source: domEvent.srcElement
-                });
+                } as any);
             }
         }
     }

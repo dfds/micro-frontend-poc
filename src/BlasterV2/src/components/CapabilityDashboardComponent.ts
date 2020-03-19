@@ -1,5 +1,7 @@
 import WebComponent from "minions-core/lib/components/WebComponent";
 import { html, property, customElement, TemplateResult } from "lit-element";
+import KafkaEventBridgePlugin from "minions-plugins-kafka/lib/KafkaEventBridgePlugin";
+import KafkaEventBridgePluginLoader from "minions-plugins-kafka/lib/KafkaEventBridgePluginLoader";
 // @ts-ignore
 import CSS from '../../style/CapabilityDashboardComponent-css.js';
 
@@ -11,9 +13,13 @@ export default class CapabilityDashboardComponent extends WebComponent {
 
     constructor() {
         super({
-            identifier: componentIdentifier,
-            plugins: []
-        }, []);
+                identifier: componentIdentifier,
+                plugins: [new KafkaEventBridgePlugin({
+                    signalREndpoint: "wss://localhost",
+                    domEventMap: [componentIdentifier]
+                })]
+            },
+            [new KafkaEventBridgePluginLoader()]);
     }
 
     render(): TemplateResult {
