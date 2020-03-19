@@ -22,6 +22,9 @@
     "lib"
   ],
   "dependencies": {
+    "minions-core": "0.0.30",
+    "minions-plugins-kafka": "0.0.7",
+    "minions-plugins-opentelemetry": "0.0.1",
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-decorators": "^7.8.3",
@@ -31,9 +34,6 @@
     "css-loader": "^3.4.2",
     "file-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "minions-core": "0.0.26",
-    "minions-plugins-kafka": "0.0.5",
-    "minions-plugins-opentelemetry": "0.0.1",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "ts-loader": "^6.2.1",
