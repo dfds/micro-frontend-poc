@@ -13,7 +13,7 @@ namespace KafkaToSignalrRelay.SignalrHub
     {
         public static void AddSignalrHub(this IServiceCollection services)
         {
-            services.AddSignalR(options => { options.EnableDetailedErrors = true; });
+            services.AddSignalR();
 
             services.AddTransient<IEventSink, SignalrEventSink>();
         }
