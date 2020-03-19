@@ -15,7 +15,7 @@ export default class CapabilityDashboardComponent extends WebComponent {
         super({
                 identifier: componentIdentifier,
                 plugins: [new KafkaEventBridgePlugin({
-                    signalREndpoint: "wss://localhost:50901/events/signalr-hub",
+                    signalREndpoint: "wss://echo.websocket.org",
                     domEventMap: [componentIdentifier]
                 })]
             },
@@ -25,7 +25,7 @@ export default class CapabilityDashboardComponent extends WebComponent {
             bubbles: false,
             composed: true,
             detail: (event: any) => {
-                console.log(event);
+                console.log("Subscriber callback event", event);
             }
         }));
     }

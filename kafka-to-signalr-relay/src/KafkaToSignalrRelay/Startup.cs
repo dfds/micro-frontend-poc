@@ -32,6 +32,14 @@ namespace KafkaToSignalrRelay
             {
                 services.AddKafkaClient();
             }
+
+            services.AddCors(options => options.AddPolicy("CorsPolicy",
+                builder =>
+                {
+                    builder.AllowAnyMethod().AllowAnyHeader()
+                        .WithOrigins("http://127.0.0.1:8080")
+                        .AllowCredentials();
+                }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

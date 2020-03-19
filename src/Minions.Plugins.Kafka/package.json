@@ -18,6 +18,7 @@
     "lib"
   ],
   "dependencies": {
+    "@microsoft/signalr": "^3.1.2",
     "minions-core": "0.0.30"
   },
   "devDependencies": {
