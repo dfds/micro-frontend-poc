@@ -21,12 +21,7 @@ namespace KafkaToSignalrRelay.SignalrHub
         public static void AddSignalrHub(this IApplicationBuilder app)
         {
             app.UseEndpoints(endpoints => { 
-                endpoints.MapHub<EventsHub>("/events/signalr-hub", options =>
-                {
-                    options.Transports = HttpTransportType.WebSockets |
-                                         HttpTransportType.LongPolling;
-                    ;
-                });
+                endpoints.MapHub<EventsHub>("/events/signalr-hub");
             });
         }
     }
