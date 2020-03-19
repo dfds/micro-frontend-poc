@@ -9,7 +9,7 @@ const componentIdentifier = "dfds-devex-capabilitydashboard-component";
 
 @customElement(componentIdentifier)
 export default class CapabilityDashboardComponent extends WebComponent {
-    @property({type: Array}) capabilities = ["xaxa", "sandbox-emcla"];
+    @property({type: Array}) capabilities = ["xaxa", "sandbox-emcla", "hoooray", "smartdata-aq", "Bosphorous", "ded-infrastructure"];
 
     constructor() {
         super({

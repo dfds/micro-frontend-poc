@@ -13,3 +13,11 @@ body {
         flex: 1;
     }
 }
+
+dfds-devex-capabilitydashboard-component[max-width~="120px"] {
+    font-size: 8px;
+}
+
+dfds-devex-capabilitydashboard-component[max-width~="320px"] {
+    font-size: 14px;
+}

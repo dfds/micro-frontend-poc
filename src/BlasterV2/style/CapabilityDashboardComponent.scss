@@ -3,9 +3,10 @@
     flex-direction: column;
     background-color: #ec6060;
     height: 100%;
+    overflow: auto; // In case this component is restricted in size, make sure that if overflow occurs, created a scrollbar.
     .capability {
         h2 {
-            font-size: 1.3rem; 
+            font-size: 1.6em; 
         }
     }
 }
