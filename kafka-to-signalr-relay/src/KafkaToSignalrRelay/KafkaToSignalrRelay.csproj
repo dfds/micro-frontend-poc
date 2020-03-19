@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -8,10 +8,6 @@
       <ProjectReference Include="..\Infrastructure\KafkaToSignalrRelay.KafkaClient\KafkaToSignalrRelay.KafkaClient.csproj" />
       <ProjectReference Include="..\Infrastructure\KafkaToSignalrRelay.RestApi\KafkaToSignalrRelay.RestApi.csproj" />
       <ProjectReference Include="..\Infrastructure\KafkaToSignalrRelay.SignalrHub\KafkaToSignalrRelay.SignalrHub.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Properties\" />
     </ItemGroup>
 
 </Project>
