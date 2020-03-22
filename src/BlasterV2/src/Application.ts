@@ -3,10 +3,12 @@ import '../style/application.scss';
 import CapabilityDashboardComponent from "./components/CapabilityDashboardComponent";
 
 export default class Application {
-    constructor() {
-        let capDashboardComponent = new CapabilityDashboardComponent();
+    dashboard : CapabilityDashboardComponent = {} as any;
 
-        let result = capDashboardComponent.render();
+    constructor() {
+        this.dashboard = new CapabilityDashboardComponent();
+
+        let result = this.dashboard.render();
         console.log(result);
     }
 }

@@ -10,6 +10,7 @@ const componentIdentifier = "dfds-devex-capabilitydashboard-component";
 @customElement(componentIdentifier)
 export default class CapabilityDashboardComponent extends WebComponent {
     @property({type: Array}) capabilities = ["xaxa", "sandbox-emcla", "hoooray", "smartdata-aq", "Bosphorous", "ded-infrastructure"];
+    @property({type: Boolean}) enabled = false;
 
     constructor() {
         super({
@@ -34,6 +35,7 @@ export default class CapabilityDashboardComponent extends WebComponent {
         return html`
         ${CSS}
         <div class="capabilityList">
+        ${this.enabled}
             ${this.capabilities.map(cap => html`
             <div class="capability">
               <h2>${cap}</h2>
@@ -41,5 +43,21 @@ export default class CapabilityDashboardComponent extends WebComponent {
             `)}
         </div>
         `;
+    }
+
+    shouldUpdate(changedProperties : any) : boolean {
+        console.log("shouldUpdate:", changedProperties);
+        return true;
+    }
+
+    interact(): void {
+        var oldCap = this.capabilities.slice();
+        var oldEnabled = this.enabled;
+        this.capabilities.push(new Date().toLocaleDateString());
+        this.enabled = !this.enabled;
+        this.requestUpdate('enabled', oldEnabled);
+        //this.requestUpdate('capabilities', oldCap).then(() => console.log("Update completed"));
+        console.log(this.capabilities);
+        console.log(this.enabled);
     }
 }
