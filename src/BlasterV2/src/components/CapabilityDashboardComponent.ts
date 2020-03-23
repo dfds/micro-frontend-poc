@@ -39,18 +39,43 @@ export default class CapabilityDashboardComponent extends WebComponent {
         return html`
         ${CSS}
         <div class="capabilityList">
-        <h1 @click=${this.interact}>${this.enabled}</h1>
-            ${(this.capabilities as Array<Capability>).map(cap => html`
-            <div class="capability">
-              <h2>${cap.Name}</h2>
-            </div>
-            `)}
+            <h1 @click=${this.interact}>${this.enabled}</h1>
+
+            <table class="table is-fullwidth is-hoverable" v-if="hasCapabilities">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Joined</th>
+                    <th>Overview</th>
+                    <th>Service indicators</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${(this.capabilities as Array<Capability>).map(cap => html`
+                <tr>
+                    <td>${cap.Name}</td>
+                    <td></td>
+                    <td>
+                        <span class="icon">
+                            <i class="far fa-chart-bar"></i>
+                        </span>
+                    </td>
+                    <td>
+                        <span class="icon">
+                            <i class="fas fa-tasks"></i>
+                        </span>
+                    </td>
+                    <td>
+                        Ready
+                    </td>                    
+                </tr>
+                `)}
+            </tbody>
+        </table>
+
         </div>
         `;
-    }
-
-    updateEnable() : void {
-        this.enabled = true;
     }
 
     shouldUpdate(changedProperties : any) : boolean {
@@ -85,14 +110,9 @@ export default class CapabilityDashboardComponent extends WebComponent {
     }
 
     interact(): void {
-        var oldCap = this.capabilities.slice();
         var oldEnabled = this.enabled;
-        //this.capabilities.push(new Date().toLocaleDateString());
         this.enabled = !this.enabled;
         this.requestUpdate('enabled', oldEnabled);
-        this.requestUpdate('capabilities', oldCap).then(() => console.log("Update completed"));
-        console.log(this.capabilities);
-        console.log(this.enabled);
     }
 }
 
