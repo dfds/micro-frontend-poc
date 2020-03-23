@@ -3,29 +3,31 @@ import EventCallback from "minions-core/lib/events/EventCallback";
 import IPublisher from "minions-core/lib/events/IPublisher";
 import ISubscriber from "minions-core/lib/events/ISubscriber";
 import KafkaEventBridgeOptions from "./KafkaEventBridgeOptions";
+import * as SignalR from "@microsoft/signalr";
 
 export default class KafkaEventBridge implements IPublisher, ISubscriber, EventListenerObject {
     private readonly callbacks: Array<EventCallback> = new Array<EventCallback>();
-    private readonly webSocket: WebSocket;
     private readonly options: KafkaEventBridgeOptions;
+    private readonly client: SignalR.HubConnection;
     
     constructor(options: KafkaEventBridgeOptions) {
         this.options = options;
-        this.webSocket = new WebSocket(this.options.signalREndpoint);
 
-        this.webSocket.onmessage = (event) => {
-            const payload = event.data as IEvent;
+        this.client = new SignalR.HubConnectionBuilder()
+            .withUrl(this.options.signalREndpoint)
+            .build();
 
-            this.callbacks.forEach((callback) => {
-                callback(payload);
-            });
-        };
+        this.client.on("messageReceived", () => {
+            console.log("got signalR message");
+        });
+
+        this.client.start().catch(err => console.log("signalr error", err));
     }
     
     publish(event: IEvent): Promise<boolean> {
         return new Promise<boolean>((resolve) => {
-            if (event !== undefined && this.webSocket.readyState === WebSocket.OPEN) {
-                this.webSocket.send(JSON.stringify(event));
+            if (event !== undefined && this.client.state === SignalR.HubConnectionState.Connected) {
+                this.client.send(JSON.stringify(event));
 
                 resolve(true);
             };

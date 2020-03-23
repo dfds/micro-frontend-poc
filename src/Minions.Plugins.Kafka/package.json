@@ -1,6 +1,6 @@
 {
   "name": "minions-plugins-kafka",
-  "version": "0.0.9",
+  "version": "0.0.14",
   "description": "Minions.Plugins.Kafka.",
   "author": {
     "name": "DFDS Development Excellence Department"
@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "@microsoft/signalr": "^3.1.2",
+    "@types/node": "^13.9.3",
     "minions-core": "0.0.30"
   },
   "devDependencies": {

@@ -25,6 +25,8 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Plugins.Kafka", "sr
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Plugins.OpenTelemetry", "src\Minions.Plugins.OpenTelemetry\Minions.Plugins.OpenTelemetry.njsproj", "{479D0761-B07E-4186-A820-EB57610FEFC5}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Minions.Plugins.Kafka.Test", "src\Minons.Plugins.Kafka.Test\Minions.Plugins.Kafka.Test.njsproj", "{F4B6D4B4-B8EF-45B7-811B-250941B6A5B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{479D0761-B07E-4186-A820-EB57610FEFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{479D0761-B07E-4186-A820-EB57610FEFC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{479D0761-B07E-4186-A820-EB57610FEFC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B6D4B4-B8EF-45B7-811B-250941B6A5B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B6D4B4-B8EF-45B7-811B-250941B6A5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B6D4B4-B8EF-45B7-811B-250941B6A5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B6D4B4-B8EF-45B7-811B-250941B6A5B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +77,7 @@ Global
 		{8E3F1C6E-DE1A-4F32-A414-B7921D93E767} = {30E9727E-B2C8-4A29-BFCC-CE82823389F1}
 		{670D7B0F-C3C0-4D8E-BDE1-D4AE43ACC045} = {8B8B5567-B673-486A-8F74-03623B0B1442}
 		{479D0761-B07E-4186-A820-EB57610FEFC5} = {8B8B5567-B673-486A-8F74-03623B0B1442}
+		{F4B6D4B4-B8EF-45B7-811B-250941B6A5B6} = {8B8B5567-B673-486A-8F74-03623B0B1442}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86BEED0F-75DF-4810-99B7-03122D359B70}

@@ -28,15 +28,6 @@ namespace KafkaToSignalrRelay
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddCors(options => options.AddPolicy("CorsPolicy",
-                builder =>
-                {
-                    builder.WithOrigins("http://localhost:8080")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod()
-                        .AllowCredentials();
-                }));
-
             services.AddRestApi();
 
             services.AddSignalrHub();
@@ -55,7 +46,13 @@ namespace KafkaToSignalrRelay
         {
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            app.UseCors("CorsPolicy");
+            app.UseCors(builder =>
+            {
+                builder.WithOrigins("http://127.0.0.1:8080")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials();
+            });
 
             app.AddRestApi(env);
             app.AddSignalrHub();
