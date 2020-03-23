@@ -35,7 +35,7 @@ export default class CapabilityDashboardComponent extends WebComponent {
         return html`
         ${CSS}
         <div class="capabilityList">
-        ${this.enabled}
+        <h1 @click=${this.interact}>${this.enabled}</h1>
             ${this.capabilities.map(cap => html`
             <div class="capability">
               <h2>${cap}</h2>
@@ -43,6 +43,10 @@ export default class CapabilityDashboardComponent extends WebComponent {
             `)}
         </div>
         `;
+    }
+
+    updateEnable() : void {
+        this.enabled = true;
     }
 
     shouldUpdate(changedProperties : any) : boolean {
@@ -56,7 +60,7 @@ export default class CapabilityDashboardComponent extends WebComponent {
         this.capabilities.push(new Date().toLocaleDateString());
         this.enabled = !this.enabled;
         this.requestUpdate('enabled', oldEnabled);
-        //this.requestUpdate('capabilities', oldCap).then(() => console.log("Update completed"));
+        this.requestUpdate('capabilities', oldCap).then(() => console.log("Update completed"));
         console.log(this.capabilities);
         console.log(this.enabled);
     }

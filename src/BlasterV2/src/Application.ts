@@ -7,9 +7,6 @@ export default class Application {
 
     constructor() {
         this.dashboard = new CapabilityDashboardComponent();
-
-        let result = this.dashboard.render();
-        console.log(result);
     }
 }
 

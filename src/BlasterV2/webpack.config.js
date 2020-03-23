@@ -50,20 +50,20 @@ const frontend = (env, argv) => {
                     },                
                 ] },
 
-                { test: /\.js?$/, exclude: /node_modules/, use:[
-                    {
-                        loader: "babel-loader",
-                        options: {
-                            presets: ['@babel/preset-env',
-                                {
+                // { test: /\.js?$/, exclude: /node_modules/, use:[
+                //     {
+                //         loader: "babel-loader",
+                //         options: {
+                //             presets: ['@babel/preset-env',
+                //                 {
 
-                                }
-                            ],
-                            plugins: ['@babel/plugin-transform-classes'],
-                            sourceMaps: false
-                        }
-                    }
-                ] },
+                //                 }
+                //             ],
+                //             plugins: ['@babel/plugin-transform-classes'],
+                //             sourceMaps: false
+                //         }
+                //     }
+                // ] },
 
                 { test: /\.scss?$/, exclude: /node_modules/, use: [
                     {
