@@ -1,5 +1,5 @@
 var webpack = require("webpack");
-var path = require("path");
+var {resolve, join} = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const frontend = (env, argv) => {
@@ -15,11 +15,20 @@ const frontend = (env, argv) => {
         },
 
         devServer: {
-            contentBase: [path.join(__dirname, 'view'), path.join(__dirname, 'dist')],
+            contentBase: [resolve(__dirname, 'view'), resolve(__dirname, 'dist')],
             compress: true,
-            port: 9010,
+            port: 9011,
             host: '0.0.0.0',
             disableHostCheck: true,
+            proxy: {
+                '/api/capsvc': {
+                    target: '',
+                    changeOrigin: true,
+                    pathRewrite: {
+                        '^/api/capsvc': ''
+                    }
+                }
+            }
         },
 
         target: 'web',
