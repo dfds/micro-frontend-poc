@@ -17,8 +17,10 @@ export default class KafkaEventBridge implements IPublisher, ISubscriber, EventL
             .withUrl(this.options.signalREndpoint)
             .build();
 
-        this.client.on("messageReceived", () => {
-            console.log("got signalR message");
+        this.client.on("ReceiveMessage", (data) => {
+            this.callbacks.forEach((callback) => {
+                callback(data);
+            });
         });
 
         this.client.start().catch(err => console.log("signalr error", err));
