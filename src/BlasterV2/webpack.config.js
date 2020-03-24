@@ -19,7 +19,7 @@ const frontend = (env, argv) => {
         plugins: [
             new MiniCssExtractPlugin({
                 filename: "[name]." + argv.mode + ".css",
-                chunkFilename: "[id].css"
+                chunkFilename: "[name]." + argv.mode + ".css"
             }),
             new HtmlWebpackPlugin({ template: "view/index.html" }),
             new CleanWebpackPlugin({ verbose: true })

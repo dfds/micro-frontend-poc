@@ -31,7 +31,8 @@ export default class CapabilityDashboardComponent extends WebComponent {
             bubbles: false,
             composed: true,
             detail: (event: any) => {
-                console.log("Subscriber callback event", event);
+                console.log("Subscriber callback event!", event);
+                this.interact();
             }
         }));
     }
