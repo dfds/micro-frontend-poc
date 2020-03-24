@@ -15,6 +15,7 @@ const devToken = '';
 export default class CapabilityDashboardComponent extends WebComponent {
     @property({type: Array}) capabilities = [];
     @property({type: Boolean}) enabled = false;
+    @property({type: String}) currentUser = "";
 
     constructor() {
         super({
@@ -35,12 +36,18 @@ export default class CapabilityDashboardComponent extends WebComponent {
         }));
     }
 
+    isMember(cap : Capability): Boolean {
+        let result = cap.Members.find(mem => mem.Email.valueOf() === this.currentUser.valueOf());
+        return result !== undefined;
+    }
+
     render(): TemplateResult {
         return html`
         ${CSS}
         <script src="https://kit.fontawesome.com/a466903c6d.js" crossorigin="anonymous"></script>
         <div class="capabilityList">
             <h1 @click=${this.interact}>${this.enabled}</h1>
+            <h1>${this.currentUser}</h1>
 
             <table class="table is-fullwidth is-hoverable" v-if="hasCapabilities">
             <thead>
@@ -56,7 +63,7 @@ export default class CapabilityDashboardComponent extends WebComponent {
                 ${(this.capabilities as Array<Capability>).map(cap => html`
                 <tr>
                     <td>${cap.Name}</td>
-                    <td></td>
+                    <td>${this.isMember(cap) ? html`<span class="tag is-primary">Joined</span>` : html``}</td>
                     <td>
                         <span class="icon">
                             <i class="far fa-chart-bar"></i>
@@ -152,6 +159,17 @@ export default class CapabilityDashboardComponent extends WebComponent {
                     capability.RootId = cap.rootId;
                     capability.Id = cap.id;
                     capability.Description = cap.description;
+
+                    capability.Contexts = cap.contexts.map((con : any) => {
+                        return Context.FromJson(con);
+                    });
+
+                    capability.Members = cap.members.map((mem : any) => {
+                        let member = new Member();
+                        member.Email = mem.email;
+                        return member;
+                    });
+
                     return capability;
                 })
                 this.requestUpdate('capabilities', oldCap).then(() => console.log("Update completed"));
@@ -175,7 +193,7 @@ class Capability {
     Id : string;
     Description : string;
     Members : Member[];
-    Contexts : Context[];
+    Contexts : IContext[];
 
     constructor() {
         this.Name = "";
@@ -195,7 +213,16 @@ class Member {
     }
 }
 
-class Context {
+interface IContext {
+    GetId() : string;
+    GetName() : string;
+    GetType() : ContextType;
+
+    Into<T>() : T;
+    ToJson() : String; // Will return all data attached to this object into json
+}
+
+class Context implements IContext {
     Id : string;
     Name : string;
 
@@ -203,4 +230,64 @@ class Context {
         this.Id = "";
         this.Name = "";
     }
+    GetId(): string {
+        return this.Id;
+    }
+
+    GetName(): string {
+        return this.Name;
+    }
+
+    GetType(): ContextType {
+        return ContextType.Base;
+    }
+
+    Into<T>(): T {
+        return ((this as any) as T);
+    }
+
+    ToJson() : String {
+        return JSON.stringify(this);
+    }
+
+    static FromJson(value : any) : IContext {
+        if (value.awsRoleEmail) {
+            let context = new AWSContext();
+            context.Id = value.id;
+            context.Name = value.name;
+            context.AwsAccountId = value.awsAccountId;
+            context.AwsRoleArn = value.awsRoleArn;
+            context.AwsRoleEmail = value.awsRoleEmail;
+        }
+        
+
+        let context = new Context();
+        context.Id = value.id;
+        context.Name = value.name;
+        return context;
+    }
+}
+
+enum ContextType {
+    Base,
+    AWS
+}
+
+// @ts-ignore
+class AWSContext extends Context {
+    AwsAccountId : string;
+    AwsRoleArn : string;
+    AwsRoleEmail : string;
+
+    constructor() {
+        super();
+        this.AwsAccountId = "";
+        this.AwsRoleArn = "";
+        this.AwsRoleEmail = "";
+    }
+
+    GetType(): ContextType {
+        return ContextType.AWS;
+    }
+
 }

@@ -1,7 +1,3 @@
-@import './bulma-0.8.0/sass/utilities/_all.sass';
-@import './bulma-0.8.0/sass/base/_all.sass';
-@import './bulma-0.8.0/sass/elements/table.sass';
-
 $dfds-font: DFDS, sans-serif;
 
 // DFDS brand colors
@@ -33,6 +29,11 @@ $success: $yes-green;
 $danger: $no-red;
 // $dark: $grey-darker;
 // $text: $grey-dark;
+
+@import './bulma-0.8.0/sass/utilities/_all.sass';
+@import './bulma-0.8.0/sass/base/_all.sass';
+@import './bulma-0.8.0/sass/elements/table.sass';
+@import './bulma-0.8.0/sass/elements/tag.sass';
 
 .capabilityList {
     display: flex;
