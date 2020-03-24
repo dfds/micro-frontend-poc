@@ -10,4 +10,8 @@ export default class Application {
     }
 }
 
-export {Application}
+export { Application }
+
+var app = new Application();
+
+console.log(app);

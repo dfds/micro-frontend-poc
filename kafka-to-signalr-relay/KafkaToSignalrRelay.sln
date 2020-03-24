@@ -19,6 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaToSignalrRelay.Integra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaToSignalrRelay.Domain", "src\KafkaToSignalrRelay.Domain\KafkaToSignalrRelay.Domain.csproj", "{9ACCD7CA-D1A7-4817-AA7D-24FFBE0034E2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B56D0949-D3FC-4F3B-A2DC-F9F0CA66A961}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

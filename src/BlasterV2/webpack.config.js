@@ -1,19 +1,43 @@
 var webpack = require("webpack");
-var {resolve, join} = require("path");
+var { resolve, join } = require("path");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const frontend = (env, argv) => {
     return {
         entry: {
-            application: ["./src/Application.ts"],
+            application: ["./src/Application.ts", "./view/ResizeSensor.js", "./view/ElementQueries.js"],
         },
         output: {
-            filename: "[name]." + argv.mode + ".js",
+            filename: "[name].[contenthash]." + argv.mode + ".js",
             path: __dirname + "/dist",
             libraryTarget: "umd",
             library: ["DFDS", "DEVEX", "Blasterv2", "[name]"]
         },
 
+        plugins: [
+            new MiniCssExtractPlugin({
+                filename: "[name]." + argv.mode + ".css",
+                chunkFilename: "[id].css"
+            }),
+            new HtmlWebpackPlugin({ template: "view/index.html" }),
+            new CleanWebpackPlugin({ verbose: true })
+        ],
+
+        optimization: {
+            moduleIds: 'hashed',
+            runtimeChunk: "single",
+            splitChunks: {
+                cacheGroups: {
+                    vendor: {
+                        test: /[\\/]node_modules[\\/]/,
+                        name: 'vendors',
+                        chunks: 'all'
+                        }
+                    }
+                }
+        },
         devServer: {
             contentBase: [resolve(__dirname, 'view'), resolve(__dirname, 'dist')],
             compress: true,
@@ -87,15 +111,7 @@ const frontend = (env, argv) => {
                     loader: "file-loader",
                 },
             ]
-        },
-
-        plugins: [
-            new MiniCssExtractPlugin({
-                filename: "[name]." + argv.mode + ".css",
-                chunkFilename: "[id].css"
-            }),
-
-        ]
+        }
     }
 }
 
