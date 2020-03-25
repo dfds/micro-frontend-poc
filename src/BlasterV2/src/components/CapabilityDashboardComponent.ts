@@ -32,7 +32,7 @@ export default class CapabilityDashboardComponent extends WebComponent {
             composed: true,
             detail: (event: any) => {
                 console.log("Subscriber callback event!", event);
-                this.interact();
+                this.interact(event);
             }
         }));
     }
@@ -127,10 +127,39 @@ export default class CapabilityDashboardComponent extends WebComponent {
         });
     }
 
-    interact(): void {
-        var oldEnabled = this.enabled;
-        this.enabled = !this.enabled;
-        this.requestUpdate('enabled', oldEnabled);
+    interact(event : any): void {
+        if (event.eventType) {
+            switch (event.eventType.valueOf()) {
+                case "capability_created".valueOf():
+                    console.log("Capability created!");
+                    let oldCap = this.capabilities.slice();
+                    
+                    let capability = new Capability();
+                    capability.Name = event.payload.name;
+                    capability.RootId = event.payload.rootId;
+                    capability.Id = event.payload.id;
+                    capability.Description = event.payload.description;
+
+                    capability.Contexts = event.payload.contexts.map((con : any) => {
+                        return Context.FromJson(con);
+                    });
+
+                    capability.Members = event.payload.members.map((mem : any) => {
+                        let member = new Member();
+                        member.Email = mem.email;
+                        return member;
+                    });
+
+                    (this.capabilities as Array<Capability>).push(capability);
+                    this.requestUpdate('capabilities', oldCap).then(() => console.log("Update completed"));
+                    break;
+                default:
+                    console.log("Unsupported eventType")
+                    break;
+            }
+        } else {
+            console.log("Unable to recognise event format")
+        }
     }
 }
 
