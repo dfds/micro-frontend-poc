@@ -52,6 +52,11 @@ namespace KafkaToSignalrRelay
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();
+
+                builder.WithOrigins("http://localhost:9011")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials();                    
             });
 
             app.AddRestApi(env);
