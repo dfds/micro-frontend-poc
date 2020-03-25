@@ -10,7 +10,7 @@ const frontend = (env, argv) => {
             application: ["./src/Application.ts", "./view/ResizeSensor.js", "./view/ElementQueries.js"],
         },
         output: {
-            filename: "[name].[contenthash]." + argv.mode + ".js",
+            filename: "[name].[hash]." + argv.mode + ".js",
             path: __dirname + "/dist",
             libraryTarget: "umd",
             library: ["DFDS", "DEVEX", "Blasterv2", "[name]"]
