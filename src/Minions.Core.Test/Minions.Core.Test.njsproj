@@ -40,11 +40,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />
+    <Folder Include="src\components\" />
+    <Folder Include="src\plugins\" />
+    <Folder Include="src\events\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\simple.test.ts">
-      <SubType>Code</SubType>
-    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\components\webcomponent.test.ts" />
+    <TypeScriptCompile Include="src\minion.test.ts" />
+    <TypeScriptCompile Include="src\plugins\plugins.test.ts" />
+    <TypeScriptCompile Include="src\events\events.test.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
