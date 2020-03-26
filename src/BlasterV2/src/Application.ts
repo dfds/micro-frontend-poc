@@ -1,9 +1,17 @@
-import ConcretComponent from "./components/ConcretComponent";
+import '../style/application.scss';
+
+import CapabilityDashboardComponent from "./components/CapabilityDashboardComponent";
 
 export default class Application {
-    constructor() {
-        let component = new ConcretComponent();
+    dashboard : CapabilityDashboardComponent = {} as any;
 
-        component.render();
+    constructor() {
+        this.dashboard = new CapabilityDashboardComponent();
     }
 }
+
+export { Application }
+
+var app = new Application();
+
+console.log(app);

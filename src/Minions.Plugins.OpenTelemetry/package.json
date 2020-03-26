@@ -1,5 +1,5 @@
 {
-  "name": "minions-plugins-opentelemetry",
+  "name": "@dfds-devex/minions-plugins-opentelemetry",
   "version": "0.0.1",
   "description": "Minions.Plugins.OpenTelemetry.",
   "author": {
@@ -18,18 +18,18 @@
     "lib"
   ],
   "dependencies": {
+    "@dfds-devex/minions-core": "0.0.31",
     "@opentelemetry/api": "^0.4.0",
     "@opentelemetry/exporter-collector": "^0.4.0",
     "@opentelemetry/plugin-document-load": "^0.4.0",
     "@opentelemetry/plugin-xml-http-request": "^0.4.0",
     "@opentelemetry/scope-base": "^0.4.0",
     "@opentelemetry/tracing": "^0.4.0",
-    "@opentelemetry/web": "^0.4.0",
-    "minions-core": "latest"
+    "@opentelemetry/web": "^0.4.0"
   },
   "devDependencies": {
     "@types/node": "^13.9.1",
     "lit-analyzer": "^1.1.9",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.3"
   }
 }

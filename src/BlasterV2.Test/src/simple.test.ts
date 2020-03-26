@@ -1,4 +1,4 @@
-import { ConcretComponent } from "dfds-blaster-v2/lib/components/ConcretComponent";
+import ConcretComponent from "@dfds-devex/dfds-blaster-v2/lib/components/ConcretComponent";
 import { fixture, html } from '@open-wc/testing';
 
 const assert: any = chai.assert;
@@ -17,7 +17,7 @@ suite("BlasterV2 ConcretComponent", () => {
         const el = await fixture(html`<dfds-concret-component></dfds-concret-component>`);
 
         //Assert
-        assert.shadowDom.equal(el, `<h1>Hello, World!</h1>`);
+        assert.shadowDom.equal(el, `<button>Click me!</button>`);
     });
 
     test("renders with set message", async () => {
@@ -25,6 +25,6 @@ suite("BlasterV2 ConcretComponent", () => {
         const el = await fixture(html`<dfds-concret-component message="Foo!"></dfds-concret-component>`);
 
         //Assert
-        assert.shadowDom.equal(el, `<h1>Foo!</h1>`);
+        assert.shadowDom.equal(el, `<button>Foo!</button>`);
     });
 });

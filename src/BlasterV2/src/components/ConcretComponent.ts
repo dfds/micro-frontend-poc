@@ -1,9 +1,7 @@
 import { html, property, customElement, TemplateResult } from "lit-element";
-import WebComponent from "minions-core/lib/components/WebComponent";
-import KafkaEventBridgePlugin from "minions-plugins-kafka/lib/KafkaEventBridgePlugin";
-import KafkaEventBridgePluginLoader from "minions-plugins-kafka/lib/KafkaEventBridgePluginLoader";
-import OpenTelemetryPlugin from "minions-plugins-opentelemetry/lib/OpenTelemetryPlugin";
-import OpenTelemetryPluginLoader from "minions-plugins-opentelemetry/lib/OpenTelemetryPluginLoader";
+import WebComponent from "@dfds-devex/minions-core/lib/components/WebComponent";
+import KafkaEventBridgePlugin from "@dfds-devex/minions-plugins-kafka/lib/KafkaEventBridgePlugin";
+import KafkaEventBridgePluginLoader from "@dfds-devex/minions-plugins-kafka/lib/KafkaEventBridgePluginLoader";
 
 const componentIdentifier = "dfds-concret-component";
 
@@ -15,12 +13,11 @@ export default class ConcretComponent extends WebComponent {
         super({
             identifier: componentIdentifier,
             plugins: [new KafkaEventBridgePlugin({
-                signalREndpoint: "wss://",
+                signalREndpoint: "http://localhost:50900/events/signalr-hub",
                 domEventMap: [componentIdentifier]
-            }),
-            new OpenTelemetryPlugin()]
+            })]
         },
-            [new KafkaEventBridgePluginLoader(), new OpenTelemetryPluginLoader()]);
+        [new KafkaEventBridgePluginLoader()]);
 
         this.dispatchEvent(new CustomEvent(this.identifier as string, {
             bubbles: false,

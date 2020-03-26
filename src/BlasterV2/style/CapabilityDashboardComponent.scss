@@ -1,0 +1,53 @@
+$dfds-font: DFDS, sans-serif;
+
+// DFDS brand colors
+$group-blue: #002B45;
+$text-grey: #4D4E4C;
+$yes-green: #C3E5B5;
+$no-red: #E5A5AB;
+$background-grey: #EEF0F1;
+
+$primary-orange: #ED8B00;
+$action-blue: #68B2E3;
+$inactive-grey: #D8DAD9;
+$link-blue: #1B5786;
+
+// Update Bulma's global variables
+$family-sans-serif: $dfds-font;
+$family-primary: $family-sans-serif;
+
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+
+$background: $background-grey;
+$primary: $primary-orange;
+$link: $link-blue;
+
+// $info: $action-blue;
+$success: $yes-green;
+// $warning: $yellow;
+$danger: $no-red;
+// $dark: $grey-darker;
+// $text: $grey-dark;
+
+@import './bulma-0.8.0/sass/utilities/_all.sass';
+@import './bulma-0.8.0/sass/base/_all.sass';
+@import './bulma-0.8.0/sass/elements/table.sass';
+@import './bulma-0.8.0/sass/elements/tag.sass';
+
+.capabilityList {
+    display: flex;
+    flex-direction: column;
+    background-color: #ec6060;
+    height: 100%;
+    overflow: auto; // In case this component is restricted in size, make sure that if overflow occurs, created a scrollbar.
+    .capability {
+        h2 {
+            font-size: 1.6em; 
+        }
+    }
+}
+
+:host {
+    font-size: 100%;
+}

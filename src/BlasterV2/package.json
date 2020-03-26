@@ -1,6 +1,6 @@
 {
-  "name": "dfds-blaster-v2",
-  "version": "0.0.4",
+  "name": "@dfds-devex/dfds-blaster-v2",
+  "version": "0.0.6",
   "description": "BlasterV2.",
   "author": {
     "name": "DFDS Development Excellence Department"
@@ -12,19 +12,40 @@
   },
   "scripts": {
     "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "clean": "tsc --build --clean",
+    "webpack-build": "webpack --mode production --progress --colors",
+    "webpack-watch": "webpack --mode development --progress --colors --watch",
+    "webpack-serve": "webpack-dev-server --mode development --colors --progress --hot",
+    "sass-render": "sass-render -w --suffix '-css.js' ./style/*.scss"
   },
   "files": [
     "lib"
   ],
   "dependencies": {
-    "minions-core": "0.0.30",
-    "minions-plugins-kafka": "0.0.7",
-    "minions-plugins-opentelemetry": "0.0.1"
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-transform-classes": "^7.8.6",
+    "@babel/preset-env": "^7.8.7",
+    "@dfds-devex/minions-core": "0.0.31",
+    "@dfds-devex/minions-plugins-kafka": "0.0.16",
+    "axios": "^0.19.2",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.0.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "ts-loader": "^6.2.1",
+    "webpack": "^4.42.0",
+    "webpack-dev-server": "^3.10.3"
   },
   "devDependencies": {
-    "@types/node": "^8.0.14",
+    "@types/node": "^8.10.59",
     "lit-analyzer": "^1.1.10",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "webpack-cli": "^3.3.11"
   }
 }

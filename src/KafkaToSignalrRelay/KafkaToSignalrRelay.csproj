@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>	
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\KafkaToSignalrRelay.KafkaClient\KafkaToSignalrRelay.KafkaClient.csproj" />
+      <ProjectReference Include="..\KafkaToSignalrRelay.RestApi\KafkaToSignalrRelay.RestApi.csproj" />
+      <ProjectReference Include="..\KafkaToSignalrRelay.SignalrHub\KafkaToSignalrRelay.SignalrHub.csproj" />
+    </ItemGroup>
+
+</Project>

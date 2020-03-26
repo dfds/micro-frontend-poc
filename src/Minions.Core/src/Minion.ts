@@ -3,8 +3,6 @@ import IPlugin from "./plugins/IPlugin";
 import IPluginLoader from "./plugins/IPluginLoader";
 import IMinionOptions from "./IMinionOptions";
 
-//IDEA.TODO: Read this @ https://www.typescriptlang.org/docs/handbook/mixins.html
-//IDEA.TODO: Read this @ https://mariusschulz.com/blog/mixin-classes-in-typescript
 export default abstract class Minion extends LitElement {
     protected readonly options: IMinionOptions | undefined;
 

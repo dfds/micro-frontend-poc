@@ -19,11 +19,10 @@ export default class KafkaEventBridgePlugin implements IPlugin {
             eventBridgeOptions.signalREndpoint = this.options.signalREndpoint;
 
             const eventBridge = new KafkaEventBridge(eventBridgeOptions);
-            const eventBridgeNode = context.appendChild(eventBridge);
 
             if (context instanceof HTMLElement) {
                 this.options.domEventMap?.forEach((eventName: string) => {
-                    context.addEventListener(eventName, eventBridgeNode);
+                    context.addEventListener(eventName, eventBridge);
                 });
             }
 

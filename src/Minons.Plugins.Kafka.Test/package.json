@@ -1,0 +1,40 @@
+{
+  "name": "@dfds-devex/minions-plugins-kafka-test",
+  "version": "0.0.1",
+  "description": "Minions.Plugins.Kafka.Test.",
+  "author": {
+    "name": "DFDS Development Excellence Department"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dfds/micro-frontend-poc.git"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "build:watch": "tsc --watch",
+    "test": "karma start karma.conf.cjs",
+    "test:watch": "karma start karma.conf.cjs --auto-watch=true --single-run=false",
+    "test:update-snapshots": "karma start karma.conf.cjs --update-snapshots",
+    "test:prune-snapshots": "karma start karma.conf.cjs --prune-snapshots"
+  },
+  "dependencies": {
+    "@dfds-devex/minions-plugins-kafka": "0.0.16"
+  },
+  "devDependencies": {
+    "@open-wc/testing": "^2.5.6",
+    "@open-wc/testing-karma": "^3.3.6",
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "deepmerge": "^4.2.2",
+    "karma": "^4.4.1",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.3.0",
+    "lit-analyzer": "^1.1.10",
+    "mocha": "^6.2.2",
+    "rollup": "^1.32.1",
+    "sinon": "^8.1.1",
+    "typescript": "^3.8.3"
+  }
+}
