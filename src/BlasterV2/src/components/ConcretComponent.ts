@@ -1,7 +1,7 @@
 import { html, property, customElement, TemplateResult } from "lit-element";
-import WebComponent from "minions-core/lib/components/WebComponent";
-import KafkaEventBridgePlugin from "minions-plugins-kafka/lib/KafkaEventBridgePlugin";
-import KafkaEventBridgePluginLoader from "minions-plugins-kafka/lib/KafkaEventBridgePluginLoader";
+import WebComponent from "@dfds-devex/minions-core/lib/components/WebComponent";
+import KafkaEventBridgePlugin from "@dfds-devex/minions-plugins-kafka/lib/KafkaEventBridgePlugin";
+import KafkaEventBridgePluginLoader from "@dfds-devex/minions-plugins-kafka/lib/KafkaEventBridgePluginLoader";
 
 const componentIdentifier = "dfds-concret-component";
 

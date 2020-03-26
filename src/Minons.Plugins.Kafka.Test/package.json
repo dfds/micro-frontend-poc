@@ -1,5 +1,5 @@
 {
-  "name": "minions-plugins-kafka-test",
+  "name": "@dfds-devex/minions-plugins-kafka-test",
   "version": "0.0.1",
   "description": "Minions.Plugins.Kafka.Test.",
   "author": {
@@ -19,7 +19,7 @@
     "test:prune-snapshots": "karma start karma.conf.cjs --prune-snapshots"
   },
   "dependencies": {
-    "minions-plugins-kafka": "0.0.15"
+    "@dfds-devex/minions-plugins-kafka": "0.0.16"
   },
   "devDependencies": {
     "@open-wc/testing": "^2.5.6",

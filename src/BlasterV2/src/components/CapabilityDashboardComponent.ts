@@ -1,7 +1,7 @@
-import WebComponent from "minions-core/lib/components/WebComponent";
+import WebComponent from "@dfds-devex/minions-core/lib/components/WebComponent";
 import { html, property, customElement, TemplateResult } from "lit-element";
-import KafkaEventBridgePlugin from "minions-plugins-kafka/lib/KafkaEventBridgePlugin";
-import KafkaEventBridgePluginLoader from "minions-plugins-kafka/lib/KafkaEventBridgePluginLoader";
+import KafkaEventBridgePlugin from "@dfds-devex/minions-plugins-kafka/lib/KafkaEventBridgePlugin";
+import KafkaEventBridgePluginLoader from "@dfds-devex/minions-plugins-kafka/lib/KafkaEventBridgePluginLoader";
 // @ts-ignore
 import CSS from '../../style/CapabilityDashboardComponent-css.js';
 

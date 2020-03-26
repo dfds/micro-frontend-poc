@@ -1,5 +1,5 @@
 {
-  "name": "minions-extension-react",
+  "name": "@dfds-devex/minions-extension-react",
   "version": "0.0.1",
   "description": "Minions.Extension.React.",
   "author": {
@@ -18,7 +18,7 @@
     "lib"
   ],
   "dependencies": {
-    "minions-core": "0.0.30"
+    "@dfds-devex/minions-core": "0.0.31"
   },
   "devDependencies": {
     "lit-analyzer": "^1.1.9",
