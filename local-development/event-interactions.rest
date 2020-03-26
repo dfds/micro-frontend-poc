@@ -1,7 +1,7 @@
 ###
 
 # Add an event
-POST http://localhost:5000/events HTTP/1.1
+POST http://localhost:50900/events HTTP/1.1
 content-type: application/json
 
 {
