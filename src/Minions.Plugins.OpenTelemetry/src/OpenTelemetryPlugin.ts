@@ -1,10 +1,11 @@
-import IPlugin from "minions-core/lib/plugins/IPlugin";
+import IPlugin from "@dfds-devex/minions-core/lib/plugins/IPlugin";
 import OpenTelemetryClient from "./OpenTelemetryClient";
 import OpenTelemetryPluginOptions from "./OpenTelemetryPluginOptions";
 
 export const pluginIdentifier: string = "OpenTelemetryPlugin";
 
 export default class OpenTelemetryPlugin implements IPlugin {
+    protected telemetryClient: OpenTelemetryClient | undefined;
     options: OpenTelemetryPluginOptions;
     name = pluginIdentifier;
 
@@ -12,10 +13,9 @@ export default class OpenTelemetryPlugin implements IPlugin {
         this.options = options as OpenTelemetryPluginOptions;
     }
 
-    initialize(context?: any): Promise<void> {
+    initialize(): Promise<void> {
         return new Promise<void>((resolve) => {
-            //TODO: Decide what and how to expose telemetry client.
-            console.log(new OpenTelemetryClient(this.options), context);
+            this.telemetryClient = new OpenTelemetryClient(this.options);
 
             resolve();
         });
