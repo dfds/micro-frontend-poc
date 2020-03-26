@@ -10,7 +10,11 @@ The service works as a part of DFDS Development excellence departments self serv
 
 ## Usage
 
-start assembly by running the command: `KAFKA_TO_SIGNALR_RELAY_START_KAFKA_CONSUMER=false dotnet run --project src/KafkaToSignalrRelay` in this directory
+build local docker image:
+docker build -f ./src/KafkaToSignalrRelay/Dockerfile .
+
+start host by running the docker image:
+docker run -p 50900:50900 -it {image-id}
 
 ## Tests
 
@@ -21,7 +25,7 @@ Run integration tests by running the command: `dotnet test src/Tests/KafkaToSign
 You can emit events into the system by posting to the HTTP REST endpoint `/events` see curl example below:
 ``` curl
 curl --request POST \
-  --url http://localhost:5000/events \
+  --url http://localhost:50900/events \
   --header 'content-type: application/json' \
   --data '{"Hello": "World"}'
 ```

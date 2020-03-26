@@ -5,7 +5,11 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
 WORKDIR /build
 
 #Copy files to container file system.
-COPY ./src ./src
+COPY ./src/KafkaToSignalrRelay ./src/KafkaToSignalrRelay
+COPY ./src/KafkaToSignalrRelay.Domain ./src/KafkaToSignalrRelay.Domain
+COPY ./src/KafkaToSignalrRelay.KafkaClient ./src/KafkaToSignalrRelay.KafkaClient
+COPY ./src/KafkaToSignalrRelay.RestApi ./src/KafkaToSignalrRelay.RestApi
+COPY ./src/KafkaToSignalrRelay.SignalrHub ./src/KafkaToSignalrRelay.SignalrHub
 
 #Set workdir to current project folder
 WORKDIR /build/src/KafkaToSignalrRelay

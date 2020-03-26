@@ -43,6 +43,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaToSignalrRelay", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaToSignalrRelay.IntegrationTests", "src\KafkaToSignalrRelay.IntegrationTests\KafkaToSignalrRelay.IntegrationTests.csproj", "{F807E9FA-D811-4124-BCA8-ABDA1553851A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{33CCFECA-4AD6-4D94-9D76-33FC7AE8F232}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "local-development", "local-development", "{123C25B8-5A22-4770-A922-4F2D2456CB2A}"
+	ProjectSection(SolutionItems) = preProject
+		local-development\event-interactions.rest = local-development\event-interactions.rest
+		local-development\watch-run.ps1 = local-development\watch-run.ps1
+		local-development\watch-run.sh = local-development\watch-run.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -124,6 +137,7 @@ Global
 		{3FB51AB5-08D1-47D9-8C14-8D21F3EEB645} = {A62640F9-CA6C-4E77-AD0A-2F3DCA7337D5}
 		{901AABA3-174F-43B8-B2AB-4CDFC651BAA2} = {30E9727E-B2C8-4A29-BFCC-CE82823389F1}
 		{F807E9FA-D811-4124-BCA8-ABDA1553851A} = {30E9727E-B2C8-4A29-BFCC-CE82823389F1}
+		{123C25B8-5A22-4770-A922-4F2D2456CB2A} = {33CCFECA-4AD6-4D94-9D76-33FC7AE8F232}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86BEED0F-75DF-4810-99B7-03122D359B70}
