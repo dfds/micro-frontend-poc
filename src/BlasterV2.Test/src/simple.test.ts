@@ -1,4 +1,4 @@
-import { ConcretComponent } from "dfds-blaster-v2/lib/components/ConcretComponent";
+import ConcretComponent from "@dfds-devex/dfds-blaster-v2/lib/components/ConcretComponent";
 import { fixture, html } from '@open-wc/testing';
 
 const assert: any = chai.assert;
