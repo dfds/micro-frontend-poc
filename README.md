@@ -14,7 +14,7 @@ build local docker image:
 docker build -f ./src/KafkaToSignalrRelay/Dockerfile .
 
 start host by running the docker image:
-docker run -p 50900:50900 -it {image-id}
+docker run -p 50900:50900 -it (image-id)
 
 ## Tests
 
