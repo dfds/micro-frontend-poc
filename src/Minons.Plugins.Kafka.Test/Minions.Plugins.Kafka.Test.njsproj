@@ -41,7 +41,7 @@
     <Folder Include="src\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\simple.test.ts">
+    <TypeScriptCompile Include="src\kafkaeventbridge.test.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>
