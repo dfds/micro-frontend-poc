@@ -1,5 +1,5 @@
-import IPlugin from "minions-core/lib/plugins/IPlugin";
-import IPluginLoader from "minions-core/lib/plugins/IPluginLoader";
+import IPlugin from "@dfds-devex/minions-core/lib/plugins/IPlugin";
+import IPluginLoader from "@dfds-devex/minions-core/lib/plugins/IPluginLoader";
 
 const expect: any = chai.expect;
 

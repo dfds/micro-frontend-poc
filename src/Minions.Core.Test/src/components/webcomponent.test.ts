@@ -1,5 +1,5 @@
-import Minion from "minions-core/lib/Minion";
-import WebComponent from "minions-core/lib/components/WebComponent";
+import Minion from "@dfds-devex/minions-core/lib/Minion";
+import WebComponent from "@dfds-devex/minions-core/lib/components/WebComponent";
 
 const expect: any = chai.expect;
 

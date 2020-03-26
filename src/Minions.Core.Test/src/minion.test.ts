@@ -1,5 +1,5 @@
 import { LitElement } from "lit-element";
-import Minion from "minions-core/lib/Minion";
+import Minion from "@dfds-devex/minions-core/lib/Minion";
 
 const expect: any = chai.expect;
 
