@@ -1,7 +1,8 @@
 {
   "name": "@dfds-devex/dfds-blaster-v2",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "BlasterV2.",
+  "type": "module",
   "author": {
     "name": "DFDS Development Excellence Department"
   },
