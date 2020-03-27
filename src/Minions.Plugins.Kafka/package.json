@@ -1,6 +1,6 @@
 {
   "name": "@dfds-devex/minions-plugins-kafka",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Minions.Plugins.Kafka.",
   "author": {
     "name": "DFDS Development Excellence Department"

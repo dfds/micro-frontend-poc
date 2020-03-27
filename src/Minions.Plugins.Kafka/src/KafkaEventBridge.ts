@@ -1,7 +1,7 @@
-import IEvent from "minions-core/lib/events/IEvent";
-import EventCallback from "minions-core/lib/events/EventCallback";
-import IPublisher from "minions-core/lib/events/IPublisher";
-import ISubscriber from "minions-core/lib/events/ISubscriber";
+import IEvent from "@dfds-devex/minions-core/lib/events/IEvent";
+import EventCallback from "@dfds-devex/minions-core/lib/events/EventCallback";
+import IPublisher from "@dfds-devex/minions-core/lib/events/IPublisher";
+import ISubscriber from "@dfds-devex/minions-core/lib/events/ISubscriber";
 import KafkaEventBridgeOptions from "./KafkaEventBridgeOptions";
 import * as SignalR from "@microsoft/signalr";
 

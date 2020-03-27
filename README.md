@@ -11,7 +11,7 @@ The service works as a part of DFDS Development excellence departments self serv
 ## Usage
 
 build local docker image:
-docker build -f ./src/KafkaToSignalrRelay/Dockerfile .
+docker build -f ./src/KafkaToSignalrRelay/Dockerfile . -t kafka-signalr-relay
 
 start host by running the docker image:
 docker run -p 50900:50900 -it (image-id)

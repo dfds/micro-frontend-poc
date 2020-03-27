@@ -1,4 +1,4 @@
-import IPlugin from "minions-core/lib/plugins/IPlugin";
+import IPlugin from "@dfds-devex/minions-core/lib/plugins/IPlugin";
 import KafkaEventBridge from "./KafkaEventBridge";
 import KafkaEventBridgePluginOptions from "./KafkaEventBridgePluginOptions";
 import KafkaEventBridgeOptions from "./KafkaEventBridgeOptions";

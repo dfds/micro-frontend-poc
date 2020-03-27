@@ -1,4 +1,4 @@
-import KafkaEventBridge from "minions-plugins-kafka/lib/KafkaEventBridge";
+import KafkaEventBridge from "@dfds-devex/minions-plugins-kafka/lib/KafkaEventBridge";
 
 const expect: any = chai.expect;
 

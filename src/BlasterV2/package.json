@@ -16,7 +16,8 @@
     "webpack-build": "webpack --mode production --progress --colors",
     "webpack-watch": "webpack --mode development --progress --colors --watch",
     "webpack-serve": "webpack-dev-server --mode development --colors --progress --hot",
-    "sass-render": "sass-render -w --suffix '-css.js' ./style/*.scss"
+    "sass-render": "sass-render --suffix '-css.js' ./style/*.scss",
+    "sass-render-watch": "sass-render -w --suffix '-css.js' ./style/*.scss"
   },
   "files": [
     "lib"
@@ -28,7 +29,7 @@
     "@babel/plugin-transform-classes": "^7.8.6",
     "@babel/preset-env": "^7.8.7",
     "@dfds-devex/minions-core": "0.0.31",
-    "@dfds-devex/minions-plugins-kafka": "0.0.16",
+    "@dfds-devex/minions-plugins-kafka": "0.0.17",
     "axios": "^0.19.2",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
@@ -46,6 +47,7 @@
     "@types/node": "^8.10.59",
     "lit-analyzer": "^1.1.10",
     "typescript": "^3.8.3",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "wc-sass-render": "^1.2.3"
   }
 }

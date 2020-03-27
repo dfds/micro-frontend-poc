@@ -3,14 +3,14 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>BlasterV2</Name>
-    <RootNamespace>BlasterV2</RootNamespace>
+    <Name>BlasterV2.Kubernetes</Name>
+    <RootNamespace>BlasterV2.Kubernetes</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>866fa935-b742-43e3-96e5-f82afcaacef8</ProjectGuid>
+    <ProjectGuid>{b6379ee9-6e6d-4612-b0e6-887b876ef124}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>
     </StartupFile>
@@ -32,26 +32,11 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Dockerfile" />
+    <Content Include=".gitignore" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
-    <Content Include="view\index.html" />
-    <Content Include="webpack.config.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="src\Application.ts">
-      <SubType>Code</SubType>
-    </TypeScriptCompile>
-    <TypeScriptCompile Include="src\components\CapabilityDashboardComponent.ts" />
-    <TypeScriptCompile Include="src\components\ConcretComponent.ts">
-      <SubType>Code</SubType>
-    </TypeScriptCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\" />
-    <Folder Include="src\components\" />
-    <Folder Include="view\" />
+    <Content Include="Pulumi.yaml" />
+    <Content Include="index.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
