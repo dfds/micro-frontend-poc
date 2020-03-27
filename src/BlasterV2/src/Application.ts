@@ -1,5 +1,3 @@
-import '../style/application.scss';
-
 import CapabilityDashboardComponent from "./components/CapabilityDashboardComponent";
 
 export default class Application {

@@ -1,0 +1,3 @@
+name: BlasterV2.Kubernetes
+runtime: nodejs
+description: A minimal Kubernetes TypeScript Pulumi program
