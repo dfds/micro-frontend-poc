@@ -5,7 +5,7 @@ import KafkaEventBridgePluginLoader from "minions-plugins-kafka/lib/KafkaEventBr
 // @ts-ignore
 import CSS from '../../style/CapabilityDashboardComponent-css.js';
 
-const axios = require('axios').default;
+import axios from "axios";
 
 const componentIdentifier = "dfds-devex-capabilitydashboard-component";
 

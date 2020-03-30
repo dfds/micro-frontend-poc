@@ -1,8 +1,7 @@
 {
   "name": "@dfds-devex/dfds-blaster-v2",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "description": "BlasterV2.",
-  "type": "module",
   "author": {
     "name": "DFDS Development Excellence Department"
   },
@@ -20,7 +19,8 @@
     "sass-render": "sass-render -w --suffix '-css.js' ./style/*.scss"
   },
   "files": [
-    "lib"
+    "lib",
+    "style"
   ],
   "dependencies": {
     "@babel/core": "^7.8.7",
