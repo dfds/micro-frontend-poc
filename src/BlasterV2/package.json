@@ -12,8 +12,9 @@
   },
   "scripts": {
     "build": "tsc --build",
+    "build-all": "npm run build | npm run sass-render | npm run webpack-build",
     "clean": "tsc --build --clean",
-    "webpack-build": "webpack --mode production --progress --colors",
+    "webpack-build": "webpack --mode development --progress --colors",
     "webpack-watch": "webpack --mode development --progress --colors --watch",
     "webpack-serve": "webpack-dev-server --mode development --colors --progress --hot",
     "sass-render": "sass-render --suffix '-css.js' ./style/*.scss",
