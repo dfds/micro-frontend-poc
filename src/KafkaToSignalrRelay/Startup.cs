@@ -68,7 +68,7 @@ namespace KafkaToSignalrRelay
                     .AllowAnyMethod()
                     .AllowCredentials();
                 
-                builder.WithOrigins("https://backstage.dfds.cloud/dfds-web-api")
+                builder.WithOrigins("https://backstage.dfds.cloud")
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();
