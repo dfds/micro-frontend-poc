@@ -62,6 +62,16 @@ namespace KafkaToSignalrRelay
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();
+                
+                builder.WithOrigins("http://localhost:3000")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials();
+                
+                builder.WithOrigins("https://backstage.dfds.cloud/dfds-web-api")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials();
             });
 
             app.AddRestApi(env);
