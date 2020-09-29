@@ -14,9 +14,9 @@
     "build": "tsc --build",
     "build-all": "npm run build | npm run sass-render | npm run webpack-build",
     "clean": "tsc --build --clean",
-    "webpack-build": "webpack --mode development --progress --colors",
-    "webpack-watch": "webpack --mode development --progress --colors --watch",
-    "webpack-serve": "webpack-dev-server --mode development --colors --progress --hot",
+    "webpack-build": "npm run-script sass-render && webpack --mode development --progress --colors",
+    "webpack-watch": "npm run-script sass-render && webpack --mode development --progress --colors --watch",
+    "webpack-serve": "npm run-script sass-render && webpack-dev-server --mode development --colors --progress --hot",
     "sass-render": "sass-render --suffix '-css.js' ./style/*.scss",
     "sass-render-watch": "sass-render -w --suffix '-css.js' ./style/*.scss"
   },
