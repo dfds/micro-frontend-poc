@@ -42,7 +42,7 @@
     "sass-loader": "^8.0.2",
     "ts-loader": "^6.2.1",
     "webpack": "^4.42.0",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^4.7.3"
   },
   "devDependencies": {
     "@types/node": "^8.10.59",
